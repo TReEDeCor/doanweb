@@ -1,0 +1,28 @@
+﻿@model IEnumerable<TReEDeCor.Models.SANPHAM>
+
+@{
+    ViewBag.Title = "SPtheoloai";
+    Layout = "~/Views/_LayoutPhroduct.cshtml";
+}
+<h1 class="text-center text-black-50"></h1>
+
+
+<div class="container py-2">
+    <div class="row">
+        @foreach (var l in Model)
+        {
+            <div class="col-md-3">
+                <img class="card-img-top img-fluid" src="~/Image/IMG-PRODUCT/@l.AnhSP" />
+                <div class="card-body">
+                    <h5 class="text-center font18">@l.TenSP</h5>
+                    <a href="@Url.Action("Chitietsanpham","PhroDuct", new {  id = l.MaSP })" class="">Xem chi tiết</a> |
+
+                </div>
+
+            </div>
+        }
+    </div>
+
+</div>
+
+

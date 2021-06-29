@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TReEDeCor.Models.LOAISANPHAM>
+
+<ul id="nav">
+    <li> <a class="activee" href="@Url.Action("Index","User")">TRANG CHỦ </a></li>
+    <li>
+        <a href="@Url.Action("Index","PhroDuct")">SẢN PHẨM</a>
+        <ul class="subnav">
+            @foreach (var m in Model)
+            {
+                <li>
+                    <a href="@Url.Action("SPtheoloai","User", new { id = m.MaLoaiSP })">@m.TenLoaiSP</a>
+                </li>
+
+            }
+        </ul>
+    </li>
+    <li>
+        <a href="#">SHOWROM</a>
+        @*<ul class="subnav">
+                <li><a href="">A</a></li>
+                <li><a href="">B</a></li>
+                <li><a href="">C</a></li>
+            </ul>*@
+    </li>
+    <li>
+        <a href="#">KHÁCH HÀNG</a>
+        <ul class="subnav">
+            <li><a href="">Bảo Hành - Hậu Mãi</a></li>
+            <li><a href="">Thực Tế - Khách Hàng</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#">TIN TỨC</a>
+        <ul class="subnav">
+            <li><a href="">Khuyến Mãi</a></li>
+            <li><a href="">Kiến Thức nội thất</a></li>
+            <li><a href="">Liên Hệ</a></li>
+        </ul>
+    </li>
+</ul>
