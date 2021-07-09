@@ -25,6 +25,32 @@ namespace TReEDeCor
             );
 
             routes.MapRoute(
+                name: "TinTuc",
+                url: "tin-tuc",
+                defaults: new { controller = "TinTuc", action = "TinTucNew", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+                name: "SuKien",
+                url: "su-kien",
+                defaults: new { controller = "SuKien", action = "SuKienNew", id = UrlParameter.Optional }
+            );
+            routes.MapRoute(
+              name: "BaoHanh-HauMai",
+              url: "bao-hanh-hau-mai",
+              defaults: new { controller = "BHHM", action = "BaoHanh_HauMai", id = UrlParameter.Optional }
+          );
+            routes.MapRoute(
+              name: "DangNhap",
+              url: "dang-nhap",
+              defaults: new { controller = "Dangnhap", action = "Nguoidung", id = UrlParameter.Optional }
+          );
+            routes.MapRoute(
+                name: "Lien He",
+                url: "lien-he",
+                defaults: new { controller = "Contact", action = "Contact", id = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }

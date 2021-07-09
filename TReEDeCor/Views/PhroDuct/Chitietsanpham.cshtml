@@ -10,7 +10,7 @@
 <div class="container ">
 
     <div class="row">
-        
+
         <div class="col-md-7">
             <img src="~/Image/IMG-PRODUCT/@Html.DisplayFor(model => model.AnhSP)" width="100%" />
         </div>
@@ -23,8 +23,8 @@
             </div>
             <div>
                 <div class="datmua">
-                    <a href="#" class="btn btn-light btn-outline-dark">Thêm vào giỏ hàng</a>
-                
+                    <a href="@Url.Action("Themgiohang","Giohang", new {@id= @Model.MaSP, @strURL=Request.Url.ToString() })" class="btn btn-light btn-outline-dark">Thêm vào giỏ hàng</a>
+
                 </div>
             </div>
         </div>

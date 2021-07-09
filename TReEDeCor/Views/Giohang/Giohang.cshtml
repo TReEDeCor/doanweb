@@ -1,0 +1,55 @@
+﻿@using TReEDeCor.Models
+@model List<Giohang>
+@{
+    ViewBag.Title = "Gio Hang";
+    Layout = "~/Views/_LayoutPhroduct.cshtml";
+}
+
+<h2 style="text-align:center">THONG TIN GIO HANG</h2>
+<table align="center" border="1">
+    <tr style="text-align:center; font-weight: bold">
+        <td>Ma San Pham</td>
+        <td>Ten San Pham</td>
+        <td>Anh San Pham</td>
+        <td>So Luong</td>
+        <td>Don Gia</td>
+        <td>Thanh Tien</td>
+        <td width="70px"></td>
+        <td width="70px"></td>
+        <td width="70px"></td>
+       
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr style="text-align:center; font-weight:bold">
+            <td>@item.idsp</td>
+            <td>@item.tensanpham</td>
+            <td><img src="~/Image/IMG-PRODUCT/@item.anh" width="200px" height="200px"/></td>
+            @using (Html.BeginForm("Capnhatgiohang","Giohang", new { id = item.idsp }))
+                {
+                    <td>
+                        <input type="number" min="1" name="txtSoluong" value="@item.soluong" style="background-color:wheat" />
+                    </td>
+                
+            <td>@String.Format("{0:0,0}", item.dongia)</td>
+            <td>@String.Format("{0:0,0}", item.tongtien)</td>
+            <td> <a href="@Url.Action("Chitietsanpham", "PhroDuct", new { id = item.idsp })">Chi tiết</a></td>
+            <td> <a href="@Url.Action("Xoagiohang", "Giohang", new { id = item.idsp })">Xóa</a></td>
+            <td> <input type="submit" value="Cập nhập"/></td>
+            }
+        </tr>
+    }
+    <tr style="font-weight:bold; text-align:right; color:peru">
+        <td colspan="4"> So luong: @ViewBag.Tongsoluong</td>
+        <td colspan="5"> Tong tien: @String.Format("{0:0,0}", ViewBag.Tongtien) VND</td>
+    </tr>
+    <tr style="font-weight:bold">
+        <td colspan="9">
+            @Html.ActionLink("Xóa tất cả", "Xoatatca", "Giohang")
+        </td>
+    </tr>
+    <tr>
+        <td colspan="9">@Html.ActionLink("ĐẶT HÀNG", "Dathang", "Giohang")</td>
+    </tr>
+</table>
+

@@ -1,8 +1,15 @@
 ﻿
-@media (min-width: 1300px) {
+/*@media (min-width: 1200px) {
     .container {
-        max-width: 1300px;
+        max-width: 1200px;
     }
+}*/
+
+
+#new1{
+    background-color: none;
+    padding: 100px;
+    text-align: center;
 }
 
 #headertop {
@@ -10,11 +17,17 @@
     color: white;
     font-size: 19px;
     background-color: black;
-    padding: 15px;
+    padding: 12px;
     position: relative;
     top: 0;
     width: 100%;
+    
 }
+    #headertop h4 {
+        
+        color: white;
+       
+    }
 
     #headertop a {
         text-decoration: none;
@@ -53,7 +66,7 @@
     position: -webkit-sticky;
     position: sticky;
     /* top: -1px;*/
-    top: 0;
+    top: 1px;
     left: 0;
     right: 0;
     z-index: 1;
@@ -68,7 +81,7 @@ header .sticky {
     /*display: inline-block;*/
     background: rgba(0,0,0,0.3);
     border: #777 solid 1px 0px;
-    padding: 0 300px;
+    padding: 0 50px;
     box-sizing: border-box;
     box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
 }
@@ -77,110 +90,99 @@ header .sticky {
     list-style-type: none;
 }
 
-ul.subnav {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
+    #nav li {
+        position: relative;
+    }
 
-#nav li {
-    position: relative;
-}
+    #nav > li > a {
+        color: white; /* peru*/
+        text-transform: uppercase;
+    }
 
-#nav > li > a {
-    color: white; /* peru*/
-    text-transform: uppercase;
-}
+    #nav > li {
+        display: inline-block; /*inline*/
+    }
 
-#nav > li {
-    display: inline-block; /*inline*/
-}
+    #nav li a {
+        text-decoration: none;
+        line-height: 42px;
+        display: block;
+        position: relative;
+        height: 70px;
+        line-height: 70px;
+        padding: 0 35px;
+        box-sizing: border-box;
+        color: white;
+        transition: 0.5s;
+        font-weight: bold;
+    }
 
-#nav li a {
-    text-decoration: none;
-    line-height: 42px;
-    display: block;
-    position: relative;
-    height: 70px;
-    line-height: 70px;
-    padding: 0 35px;
-    box-sizing: border-box;
-    color: white;
-    transition: 0.5s;
-    font-weight: bold;
-}
+    #nav li:hover .subnav {
+        display: inline-block;
+    }
 
-#nav li:hover .subnav {
-    display: inline-block;
-}
+    #nav > li > a:hover:before {
+        transform-origin: left;
+        transform: scaleX(1);
+    }
 
-#nav > li > a:hover:before {
-    transform-origin: left;
-    transform: scaleX(1);
-}
+    #nav > li > a:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: 90%;
+        background: #fff;
+        transform-origin: right;
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform 0.5s;
+        font-weight: 5px;
+        font-size: 20px;
+    }
 
-#nav > li > a:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 90%;
-    height: 90%;
-    background: #fff;
-    transform-origin: right;
-    z-index: -1;
-    transform: scaleX(0);
-    transition: transform 0.5s;
-    font-weight: 5px;
-    font-size: 20px;
-}
-
-#nav .subnav li a:hover {
-    /*color: peru black;
+    #nav .subnav li a:hover {
+        /*color: peru black;
         background: #fff;
         transform-origin: left;
         z-index: -1;
         transform: scaleY(0);
         transition: transform 0.5s;*/
-    color: /*peru*/ darkgoldenrod;
-    background: #fff;
-    text-decoration: none;
-    background: #fff;
-}
-/*.subnav  a:hover {
-        color:*/ /*peru*/ /*darkgoldenrod;
+        color: /*peru*/ darkgoldenrod;
         background: #fff;
-        transform-origin: left;
-        z-index: -1;
-        transform: scaleY(0);
-        transition: transform 0.5s;
-    }*/
-.subnav a:hover {
-    color: /*peru*/ darkgoldenrod;
-    background: none;
-    text-decoration: none;
-}
-
-#nav > li:hover > a {
-    background-color: #777;
-    color: #353410;
-}
-
-#nav .subnav {
-    display: none;
-    background-color: #000;
-    color: #fff;
-    position: absolute;
-    box-shadow: 0 0 0 rgba(0,0,0, 0.4); /*.3 10px*/
-    min-width: 300px;
-    top: 100%;
-}
-
-    #nav .subnav li a {
-        color: #fff;
-        padding: /*10px*/ 12px;
-        line-height: 38px;
+        text-decoration: none;
+        background: #fff;
     }
+  
+    .subnav a:hover {
+        color: /*peru*/ darkgoldenrod;
+        background: none;
+        text-decoration: none;
+    }
+
+
+    #nav > li:hover > a {
+        background-color: #777;
+        color: #353410;
+    }
+
+    #nav .subnav {
+        display: none;
+        background-color: #000;
+        color: #fff;
+        position: absolute;
+        box-shadow: 0 0 0 rgba(0,0,0, 0.4); /*.3 10px*/
+        min-width: 300px;
+        top: 100%;
+    }
+
+
+        #nav .subnav li a {
+            color: #fff;
+            padding: /*10px*/ 12px;
+            line-height: 38px;
+        }
 
 #hd .logodc {
     float: left;
@@ -190,7 +192,7 @@ ul.subnav {
 
 #hd .search-btn {
     float: right;
-    padding: 3px 25px;
+    padding: 3px 20px;
 }
 
     #hd .search-btn:hover {
@@ -214,16 +216,21 @@ ul.subnav {
 }
 
 .row {
+    width:auto;
+    /*max-width: 1349px;*/
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+    /*margin-right: 100px;*/
+    /*  margin-left: 15px;*/
 }
 
 .spanimaition:hover img {
     width: 100%;
-    transform: scale(0.1);
-    transition: 5s;
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
 }
 
 #headertop hr {
@@ -239,25 +246,22 @@ ul.subnav {
 }*/
 .i img {
     display: block;
-    max-width: 100%;
+    max-width: 97%;
     height: auto;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-.Tinmainimg img {
+.tinmain img {
     display: block;
-    max-width: 100%;
+    width: 90%;
     height: auto;
     box-sizing: border-box;
     overflow: hidden;
 }
 
-.Tinmain {
-    background-color: black;
-}
 
-}
+
 
 #emg {
     background-color: black;
@@ -265,8 +269,9 @@ ul.subnav {
 
 .tinmain {
     background-color: black;
-    padding-top: 130px;
+    padding-top: 125px;
     padding-bottom: 0;
+  
 }
 
     .tinmain h1 {
@@ -279,15 +284,6 @@ ul.subnav {
     text-align: center;
 }
 
-.tinmain2 {
-    background-color: black;
-    padding: 20px 30px;
-}
-
-    .tinmain2 h2 {
-        font-size: 60px;
-    }
-
 h1 {
     color: white;
 }
@@ -295,11 +291,10 @@ h1 {
 h2 {
     color: darkgoldenrod;
     padding-top: 5px;
-    font-family:
 }
 
 #ttmain:hover img {
-    transform: scale(1.009);
+    transform: scale(1.007);
     transition: all 0.3s ease-in-out;
 }
 
@@ -307,14 +302,14 @@ h2 {
     position: absolute;
     letter-spacing: 2px;
     bottom: 0px;
-    left: 40%;
-    transform: translateX(-40%);
+    left: 35%;
+    transform: translateX(-35%);
     transition: all 0.3s;
     opacity: 0;
 }
 
 #ttmain:hover .ttname {
-    bottom: 45%;
+    bottom: 43%;
     opacity: 1;
 }
 
@@ -327,7 +322,7 @@ h2 {
 
 .tinmain3 {
     background-color: black;
-    padding: 20px 20px;
+    padding: 18px 18px;
     padding-bottom: 40px;
 }
 
@@ -353,63 +348,7 @@ h2 {
         font-family: Courier New, Courier, monospace;
     }
 
-.st {
-    position: absolute;
-    color: white;
-    top: 110px;
-    left: 230px;
-    text-align: left;
-    /*border:double;
-     color:goldenrod;*/
-}
 
-    .st:hover {
-        transform: scale(0.1);
-        transition: 1.5s;
-    }
-
-.st2:hover {
-    transform: scale(0.1);
-    transition: 1.5s;
-}
-
-.st4:hover {
-    transform: scale(0.1);
-    transition: 1.5s;
-}
-
-.st3:hover {
-    transform: scale(0.1);
-    transition: 1.5s;
-}
-
-.st2 {
-    position: absolute;
-    color: white;
-    top: 110px;
-    left: 430px;
-    border: double;
-    color: goldenrod;
-}
-
-.st3 {
-    position: absolute;
-    color: white;
-    top: 100px;
-    left: 250px;
-    border: double;
-    color: goldenrod;
-}
-
-.st4 {
-    position: absolute;
-    color: white;
-    top: 110px;
-    left: 100px;
-    text-align: left;
-    /*border:double;
-     color:goldenrod;*/
-}
 
 #doanhmuc {
     position: static;
@@ -427,7 +366,7 @@ h2 {
 
 .dm2 img {
     height: 320px;
-    width: 1300px;
+    width: 1000px;
     object-fit: cover;
     border: outset;
     border-color: black;
@@ -437,7 +376,7 @@ h2 {
 
 .dm3 img {
     height: 320px;
-    width: 1300px;
+    width: 1000px;
     object-fit: cover;
     border: outset;
     border-color: black;
@@ -462,7 +401,15 @@ h2 {
 
 #dmend {
     background-color: black;
+/*    max-width:1349px;*/
+        width:auto;
+        box-sizing:border-box;
+   
 }
+   /* #dmend .col-md {
+        width: calc(100%/2);
+        box-sizing:border-box;
+    }*/
 
 #owl-demo .item {
     background: #3fbf79;
@@ -491,14 +438,14 @@ h2 {
 
 .doanhmucwarpper {
     overflow: hidden;
-    max-width: 100%;
+    max-width: 97%;
 }
 
 .na img {
     max-width: 524px;
     max-height: 524px;
     overflow: hidden;
-    border-bottom-left-radius: 15%;
+   
 }
 
 .na a:hover {
@@ -506,76 +453,27 @@ h2 {
     color: darkgoldenrod;
 }
 
-.na1 a:hover {
-    text-decoration: none;
-    color: darkgoldenrod;
-}
 
-.na2 a:hover {
-    text-decoration: none;
-    color: darkgoldenrod;
-}
 
-.na1 img {
-    max-width: 524px;
-    max-height: 524px;
-    padding-left: 15px;
-    border-bottom-left-radius: 10%;
-    border-top-right-radius: 10%;
-}
 
-.na2 img {
-    max-width: 524px;
-    max-height: 524px;
-    overflow: hidden;
-    border-top-right-radius: 15%;
-}
 
 .na :hover img {
     transform: scale(1.05);
     transition: all 0.3s ease-in-out;
 }
 
-.na2 :hover img {
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
-}
 
-.na1 :hover img {
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
-}
 
 .name a {
     text-decoration: none;
 }
 
-.name2 {
-    display: block;
-    position: absolute;
-    letter-spacing: 2px;
-    bottom: 0px;
-    left: 35%;
-    transform: translateX(-40%);
-    transition: all 0.3s;
-    opacity: 0;
-}
-
-.name1 {
-    position: absolute;
-    letter-spacing: 2px;
-    bottom: 0px;
-    left: 43%;
-    transform: translateX(-40%);
-    transition: all 0.3s;
-    opacity: 0;
-}
 
 .name {
     position: absolute;
     letter-spacing: 2px;
     bottom: 0px;
-    left: 40%;
+    left: 50%;
     transform: translateX(-50%);
     transition: all 0.3s;
     opacity: 0;
@@ -591,25 +489,8 @@ h2 {
     font-family: Courier New, Courier, monospace;
 }
 
-.na1 h5 {
-    color: white;
-    font-family: Courier New, Courier, monospace;
-}
 
-.na2 h5 {
-    color: white;
-    font-family: Courier New, Courier, monospace;
-}
 
-.na1:hover .name1 {
-    bottom: 20%;
-    opacity: 1;
-}
-
-.na2:hover .name2 {
-    bottom: 20%;
-    opacity: 1;
-}
 
 .itemimg {
     display: block;
@@ -729,26 +610,26 @@ footer .ti {
     margin-bottom: 7px;
 }
 
-input {
+.justify-content-center input {
     border: 2px solid peru !important;
 }
 
-.input-group-lg > .custom-select,
-.input-group-lg > .form-control:not(textarea) {
+.justify-content-center .input-group-lg > .custom-select,
+.justify-content-center .input-group-lg > .form-control:not(textarea) {
     height: calc(37px + (45 - 37) * ((80vw - 320px) / (1300 - 320))) !important;
 }
 
-input::-webkit-input-placeholder {
+.justify-content-center input::-webkit-input-placeholder {
     padding-left: 5px !important;
     transform: translate3d(0, -4px, 0);
 }
 
-input::placeholder {
+.justify-content-center input::placeholder {
     vertical-align: middle !important;
     font-size: calc(12px + (12 - 10) * ((80vw - 320px) / (1300 - 320))) !important;
 }
 
-input:focus {
+.justify-content-center input:focus {
     -moz-box-shadow: none !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
@@ -847,28 +728,26 @@ footer {
         opacity: 1;
         bottom: 10%;
     }
-
-
-/*.doanhmucwarpper{
-                    margin:0;
-                    padding:0;
-                }
-.doanhmucwarpper ul a {
-    list-style:none;
-    text-decoration:none;
+#qcnew{
+    position:fixed;
+    bottom:1px;;
+    right:1px;
+    width:333px;
 }
-.doanhmucwarpper{
-    display:flex;
-    justify-content:center;
-}
-ul.doanhmucwarpper{
-    display:flex;
-}
-ul.doanhmucwarpper li{
-    max-width:524px;
-}
-ul.doanhmucwarpper li img{
-        max-width:100%;
+@-webkit-keyframes hieuung{
+    from{
+        transform:scale(0.5);
     }
+    to{
+        transform:scale(1);
+    }
+}
+#qcnew img{
+    animation: hieuung 3s forwards;
+}
+#moqc{
+    display:none;
+}
 
-*/
+
+

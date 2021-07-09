@@ -9,18 +9,18 @@ namespace TReEDeCor.Controllers
 {
     public class NguoiDungController : Controller
     {
-        DatabaseDataContext db = new DatabaseDataContext();
         // GET: NguoiDung
         public ActionResult Index()
         {
             return View();
         }
+        DatabaseDataContext db = new DatabaseDataContext();
         [HttpGet]
         public ActionResult DangKy()
         {
             return View();
         }
-        
+
 
 
         [HttpPost]
@@ -54,18 +54,18 @@ namespace TReEDeCor.Controllers
             {
                 ViewData["loi5"] = "Không được để trống";
             }
-            else if (String.IsNullOrEmpty(rematkhau))
-            {
-                ViewData["loi6"] = "Không được để trống";
-            }
+            //else if (String.IsNullOrEmpty(rematkhau))
+            //{
+            //    ViewData["loi6"] = "Không được để trống";
+            //}
             else if (String.IsNullOrEmpty(sdt))
             {
                 ViewData["loi7"] = "Không được để trống";
             }
-            else if (String.IsNullOrEmpty(ngaysinh))
-            {
-                ViewData["loi8"] = "Không được để trống";
-            }
+            //else if (String.IsNullOrEmpty(ngaysinh))
+            //{
+            //    ViewData["loi8"] = "Không được để trống";
+            //}
             else
             {
                 NGUOIDUNG tk = db.NGUOIDUNGs.SingleOrDefault(n => n.Taikhoan == tendn);
@@ -74,10 +74,10 @@ namespace TReEDeCor.Controllers
                 {
                     ViewData["loi11"] = "Tài khoản đã tồn tại!";
                 }
-                else if(em != null)
+                else if (em != null)
                 {
                     ViewData["loi12"] = "Email đã tồn tại!";
-                }    
+                }
                 else if (matkhau == rematkhau)
                 {
                     ngd.HoTen = hoten;
@@ -89,46 +89,81 @@ namespace TReEDeCor.Controllers
                     ngd.Ngaysinh = DateTime.Parse(ngaysinh);
                     db.NGUOIDUNGs.InsertOnSubmit(ngd);
                     db.SubmitChanges();
-                    return RedirectToAction("DangNhap");
+                    return RedirectToAction("TestDN");
                 }
                 else
                     ViewBag.ThongBao = "Mật Khẩu Không Khớp!";
 
-            }    
+            }
             return this.DangKy();
         }
-        
-        public ActionResult DangNhap()
+        //public ActionResult DangNhap()
+        //{
+        //    return View();
+        //}
+
+        //[HttpPost]
+        //public ActionResult DangNhap(FormCollection collection)
+        //{
+        //    var tendn = collection["TenDangNhap"];
+        //    var matkhau = collection["MatKhau"];
+
+        //    if (String.IsNullOrEmpty(tendn))
+        //    {
+        //        ViewData["loi1"] = "Không được để trống";
+        //    }
+        //    else if (String.IsNullOrEmpty(matkhau))
+        //    {
+        //        ViewData["loi2"] = "Không được để trống";
+        //    }
+        //    else
+        //    {
+        //        NGUOIDUNG ngdung = db.NGUOIDUNGs.SingleOrDefault(n => n.Taikhoan == tendn && n.Matkhau == matkhau);
+        //        if (ngdung != null)
+        //        {
+        //            return RedirectToAction("Index", "Home");
+        //        }
+        //        else
+        //            ViewBag.ThongBao = "Tên Đăng Nhập Hoặc Tài Khoản Không Đúng";
+        //    }
+        //    return View();
+        //}
+
+        public ActionResult Dangnhap()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult DangNhap(FormCollection collection)
+        public ActionResult Dangnhap(FormCollection collection)
         {
             var tendn = collection["TenDangNhap"];
             var matkhau = collection["MatKhau"];
-            
+
             if (String.IsNullOrEmpty(tendn))
             {
                 ViewData["loi1"] = "Không được để trống";
-            }  
+            }
             else if (String.IsNullOrEmpty(matkhau))
             {
                 ViewData["loi2"] = "Không được để trống";
             }
             else
             {
-                var ngdung = db.NGUOIDUNGs.SingleOrDefault(n => n.Taikhoan == tendn && n.Matkhau == matkhau);
+                NGUOIDUNG ngdung = db.NGUOIDUNGs.SingleOrDefault(n => n.Taikhoan == tendn && n.Matkhau == matkhau);
                 if (ngdung != null)
                 {
-                    Session["taikhoan"] = ngdung.Taikhoan;
-                    return RedirectToAction("Index","Home");
+
+                    Session["Taikhoan"] = ngdung;
+                    return RedirectToAction("Index", "Home");
+
                 }
                 else
                     ViewBag.ThongBao = "Tên Đăng Nhập Hoặc Tài Khoản Không Đúng";
             }
             return View();
-        }   
+        }
+
+
     }
 }

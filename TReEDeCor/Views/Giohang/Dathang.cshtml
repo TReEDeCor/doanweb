@@ -1,0 +1,79 @@
+﻿
+@model List<Giohang>
+@{
+    ViewBag.Title = "Dat Hang";
+    Layout = "~/Views/_LayoutPhroduct.cshtml";
+}
+
+<h2 style="text-align: center">THONG TIN HANG HOA</h2>
+<table align="center" border="1">
+    <tr style="text-align:center; font-weight: bold">
+        <td>Ma San Pham</td>
+        <td>Ten San Pham</td>
+        <td>Anh San Pham</td>
+        <td>So Luong</td>
+        <td>Don Gia</td>
+        <td>Thanh Tien</td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr style="text-align:center; font-weight:bold">
+            <td>@item.idsp</td>
+            <td>@item.tensanpham</td>
+            <td><img src="~/Image/IMG-PRODUCT/@item.anh" width="200px" height="200px" /></td>
+            @using (Html.BeginForm("Capnhatgiohang", "Giohang", new { id = item.idsp }))
+            {
+                <td>  @item.soluong </td>
+                <td>@String.Format("{0:0,0}", item.dongia)</td>
+                <td>@String.Format("{0:0,0}", item.tongtien)</td>
+            }
+        </tr>
+    }
+    <tr style="font-weight:bold; text-align:center">
+        <td colspan="4"> So luong: @ViewBag.Tongsoluong</td>
+        <td colspan="4"> Tong tien: @String.Format("{0:0,0}", ViewBag.Tongtien) VND</td>
+    </tr>
+    <tr style="font-weight:bold">
+        <td colspan="9">
+            @Html.ActionLink("TRỞ VỀ GIỎ HÀNG", "Giohang", "Giohang")
+        </td>
+    </tr>
+</table>
+
+@using TReEDeCor.Models
+<h2 style="text-align:center"> THÔNG TIN KHÁCH HÀNG</h2>
+@{
+    NGUOIDUNG kh = (NGUOIDUNG)Session["Taikhoan"];
+}
+<table align="center">
+    @using (Html.BeginForm())
+    {
+        @Html.ValidationSummary(true)
+        <tr style="height:40px">
+            <td> Ho ten khach: </td>
+            <td> @kh.HoTen </td>
+        </tr>
+        <tr style="height:40px">
+            <td> Dia chi: </td>
+            <td> @kh.Diachi</td>
+        </tr>
+        <tr style="height:40px">
+            <td> SDT: </td>
+            <td> @kh.Dienthoai</td>
+        </tr>
+        <tr style="height:40px">
+            <td> Ngay dat: </td>
+            <td> @DateTime.Now.ToShortDateString()</td>
+        </tr>
+        <tr style="height:40px">
+            <td> Ngày giao: </td>
+            <td> <input type="date" name="Ngaygiao" /></td>
+        </tr>
+        <tr style="height:40px">
+            <td> </td>
+            <td> <input type="submit" value="Đặt hàng" /></td>
+        </tr>
+
+    }
+</table>
+

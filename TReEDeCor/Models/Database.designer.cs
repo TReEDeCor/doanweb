@@ -1005,8 +1005,6 @@ namespace TReEDeCor.Models
 		
 		private System.Nullable<System.DateTime> _Ngaysinh;
 		
-		private System.Nullable<bool> _Gioitinh;
-		
 		private EntitySet<DONDATHANG> _DONDATHANGs;
 		
 		private EntitySet<BINHLUAN> _BINHLUANs;
@@ -1031,8 +1029,6 @@ namespace TReEDeCor.Models
     partial void OnDienthoaiChanged();
     partial void OnNgaysinhChanging(System.Nullable<System.DateTime> value);
     partial void OnNgaysinhChanged();
-    partial void OnGioitinhChanging(System.Nullable<bool> value);
-    partial void OnGioitinhChanged();
     #endregion
 		
 		public NGUOIDUNG()
@@ -1198,26 +1194,6 @@ namespace TReEDeCor.Models
 					this._Ngaysinh = value;
 					this.SendPropertyChanged("Ngaysinh");
 					this.OnNgaysinhChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Gioitinh", DbType="Bit")]
-		public System.Nullable<bool> Gioitinh
-		{
-			get
-			{
-				return this._Gioitinh;
-			}
-			set
-			{
-				if ((this._Gioitinh != value))
-				{
-					this.OnGioitinhChanging(value);
-					this.SendPropertyChanging();
-					this._Gioitinh = value;
-					this.SendPropertyChanged("Gioitinh");
-					this.OnGioitinhChanged();
 				}
 			}
 		}
