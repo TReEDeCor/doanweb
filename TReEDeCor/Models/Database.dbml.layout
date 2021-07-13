@@ -99,5 +99,11 @@
         <classShapeMoniker Id="0ac30aa3-3bc9-40a6-98aa-9287a3d3fd4b" />
       </nodes>
     </associationConnector>
+    <classShape Id="4071d93e-fc05-4644-97bc-9d3a469665cb" absoluteBounds="5.75, 2.125, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DatabaseDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="62f2a3ff-a6bb-4794-a574-72ecbe394fd4" absoluteBounds="5.765, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
   </nestedChildShapes>
 </ordesignerObjectsDiagram>

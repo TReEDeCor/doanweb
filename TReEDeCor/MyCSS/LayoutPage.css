@@ -6,10 +6,14 @@
 }*/
 
 
-#new1{
+#new{
     background-color: none;
     padding: 100px;
     text-align: center;
+}
+.new1{
+    background-color:black;
+    border-radius:15%;
 }
 
 #headertop {
@@ -439,11 +443,12 @@ h2 {
 .doanhmucwarpper {
     overflow: hidden;
     max-width: 97%;
+    padding-right:65px;
 }
 
 .na img {
-    max-width: 524px;
-    max-height: 524px;
+    max-width: 400px;
+    max-height: 400px;
     overflow: hidden;
    
 }
@@ -452,6 +457,7 @@ h2 {
     text-decoration: none;
     color: darkgoldenrod;
 }
+
 
 
 
@@ -468,7 +474,12 @@ h2 {
     text-decoration: none;
 }
 
-
+.name h1{
+    font-size:25px;
+}
+.name h5{
+    font-size:15px;
+}
 .name {
     position: absolute;
     letter-spacing: 2px;
@@ -505,6 +516,10 @@ h2 {
     padding-right: 20px;
     padding-left: 20px;
 }
+.tintucstyle img {
+   width:190px;
+   height:140px;
+}
 
     .tintucstyle h6 {
         color: darkgray;
@@ -512,6 +527,11 @@ h2 {
 
     .tintucstyle h5 {
         color: white;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+       
+    }
+    .tintucstyle h4 {
+        font-size: 15px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
@@ -710,43 +730,32 @@ footer {
     width: 1090px;
     height: 600px;
 }
-/*#a {
-    margin-top: 20px;
-}*/
 
-#doitac {
-    background-color: black;
+
+
+#qcnew {
+    position: fixed;
+    bottom: 1px;
+    right: 1px;
+    width: 255px;
 }
 
-    #doitac img {
-        opacity: 0.3;
+@-webkit-keyframes hieuung {
+    from {
+        transform: scale(0.5);
     }
 
-    #doitac:hover img {
-        transform: scale(1.05);
-        transition: all 0.3s ease-in-out;
-        opacity: 1;
-        bottom: 10%;
-    }
-#qcnew{
-    position:fixed;
-    bottom:1px;;
-    right:1px;
-    width:333px;
-}
-@-webkit-keyframes hieuung{
-    from{
-        transform:scale(0.5);
-    }
-    to{
-        transform:scale(1);
+    to {
+        transform: scale(1);
     }
 }
-#qcnew img{
+
+#qcnew img {
     animation: hieuung 3s forwards;
 }
-#moqc{
-    display:none;
+
+#moqc {
+    display: none;
 }
 
 

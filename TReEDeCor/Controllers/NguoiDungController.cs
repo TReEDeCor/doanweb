@@ -89,7 +89,7 @@ namespace TReEDeCor.Controllers
                     ngd.Ngaysinh = DateTime.Parse(ngaysinh);
                     db.NGUOIDUNGs.InsertOnSubmit(ngd);
                     db.SubmitChanges();
-                    return RedirectToAction("TestDN");
+                    return RedirectToAction("Dangnhap");
                 }
                 else
                     ViewBag.ThongBao = "Mật Khẩu Không Khớp!";

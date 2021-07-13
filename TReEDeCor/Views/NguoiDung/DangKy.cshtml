@@ -4,6 +4,14 @@
     Layout = "~/Views/_LayoutPhroduct.cshtml";
 }
 
+<div class="tmain text-center">
+    <h2><b>  ĐĂNG KÝ TÀI KHOẢN </b></h2>
+    TReE'S Decor
+    &ensp;
+    &ensp;
+    <h1></h1>
+    &ensp;
+</div>
 @*<table align="center">
         <h2 style="text-align:center">Đăng Ký Thành Viên</h2>
         <h4 style="color:red; text-align:center">@ViewBag.ThongBao</h4>
@@ -99,16 +107,15 @@
         section-contact .noi-dung {
             display: flex;
             position: absolute;
-            justify-content: center;
-            align-items: center;
-           
+            /*justify-content: center;*/
+            /*align-items: center;*/
             padding-left: 21%;
             width: 85%;
             height: 93%;
         }
 
             section-contact .noi-dung .form {
-                width: 55%;
+                width: 100%;
             }
 
 
@@ -214,32 +221,7 @@
                         section-contact .noi-dung .form .icon-dang-nhap li i {
                             font-size: 28px;
                         }
-
-
-    input[type="radio"] {
-        display: none;
-    }
-
-        input[type="radio"] + label {
-            color: #000;
-            font-family: Courier New, Courier, monospace;
-        }
-
-            input[type="radio"] + label span {
-                display: inline-block;
-                width: 19px;
-                height: 19px;
-                margin: -2px 10px 0 0;
-                vertical-align: middle;
-                background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png)-38px top no-repeat;
-                cursor: pointer;
-            }
-
-        input[type="radio"]:checked + label span {
-            background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/check_radio_sheet.png) -57px top no-repeat;
-        }
 </style>
-
 
 @using (Html.BeginForm())
 {
@@ -253,59 +235,72 @@
         </div>
 
         <div class="noi-dung">
-            <div class="form">
-                <h2> <b>Đăng ký</b></h2>
+            @*<div class="form">*@
+            @*<h2> <b>Đăng ký</b></h2>*@
+            <div class="row">
+
                 <form action="">
-                    <div class="input-form">
-                        <span><b>Họ & Tên </b></span>
-                        <input type="text" name="HoTen">
-                        @ViewData["loi1"]
-                    </div>
-                    <div class="input-form">
-                        <span><b>Ngày Sinh</b></span>
-                        <input type="date" name="NgaySinh">
-                       
-                    </div>
+                    <div class="col-6">
+                        <div class="form">
+                            <div class="input-form ">
+                                <span><b>Họ & Tên </b></span>
+                                <input type="text" name="HoTen">
+                                @ViewData["loi1"]
+                            </div>
+                            <div class="input-form">
+                                <span><b>Ngày Sinh</b></span>
+                                <input type="date" name="NgaySinh">
+
+                            </div>
 
 
-                    <div class="input-form">
-                        <span><b>Nhập Gmail</b></span>
-                        <input type="email" name="Email">@ViewData["loi3"]
-                    </div>
+                            <div class="input-form">
+                                <span><b>Nhập Gmail</b></span>
+                                <input type="email" name="Email">@ViewData["loi3"]
+                            </div>
 
-                    <div class="input-form">
-                        <span><b>Nhập SĐT</b></span>
-                        <input type="text" name="SDT" min="10" max="11"> @*@ViewData["loi7"]*@
+                            <div class="input-form">
+                                <span><b>Nhập SĐT</b></span>
+                                <input type="text" name="SDT" min="10" max="11"> @ViewData["loi7"]
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-form">
-                        <span><b>Địa chỉ </b></span>
-                        <input type="text" name="DiaChi" min="10" max="11">
-                        @ViewData["loi4"]
+                    <div class="col-6">
+                        <div class="form">
+                            <div class="input-form">
+                                <span><b>Địa chỉ </b></span>
+                                <input type="text" name="DiaChi" min="10" max="11">
+                                @ViewData["loi4"]
+                            </div>
+                            <div class="input-form">
+                                <span><b>Tên Đăng Nhập</b></span>
+                                <input type="text" name="TenDangNhap">
+                                @ViewData["loi2"] @ViewData["loi11"]
+                            </div>
+                            <div class="input-form">
+                                <span><b>Mật Khẩu</b></span>
+                                <input type="password" name="MatKhau">
+                            </div>
+                            <div class="input-form">
+                                <span><b>Nhập lại Mật Khẩu</b></span>
+                                <input type="password" name="RematKhau">
+                            </div>
+                        </div>
                     </div>
-                    <div class="input-form">
-                        <span><b>Tên Đăng Nhập</b></span>
-                        <input type="text" name="TenDangNhap">
-                        @ViewData["loi2"] @ViewData["loi11"]
-                    </div>
-                    <div class="input-form">
-                        <span><b>Mật Khẩu</b></span>
-                        <input type="password" name="MatKhau">
-                    </div>
-                    <div class="input-form">
-                        <span><b>Nhập lại Mật Khẩu</b></span>
-                        <input type="password" name="RematKhau">
-                    </div>
-                    <div class="input-form">
-                        <input type="submit" value="Đăng ký">
-                    </div>
-                    <div class="input-form">
-                        <p><i>Bạn Đã Có Tài Khoản?</i> <a href="@Url.Action("TestDN", "NguoiDung")"><b>Đăng Nhập</b></a></p>
+                    <div class="form">
+                        <div class="input-form">
+                            <input type="submit" value="Đăng ký">
+                        </div>
+                        <div class="input-form">
+                            <p><i>Bạn Đã Có Tài Khoản?</i> <a href="@Url.Action("Dangnhap", "NguoiDung")"><b>Đăng Nhập</b></a></p>
+                        </div>
                     </div>
                 </form>
 
-
             </div>
+            @*</div>*@
         </div>
 
     </section-contact>
 }
+

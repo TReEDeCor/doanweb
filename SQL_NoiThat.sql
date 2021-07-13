@@ -54,7 +54,7 @@ Create Table LOAISANPHAM
 GO
 INSERT INTO [dbo].[LOAISANPHAM]([MaNCC],[TenLoaiSP],[AnhLoaiSP],[Mota])
      VALUES(1,N'Sopha Da Nhập Khẩu','sophaSP.jpg',N'Sopha da thật 100%. Đẳng cấp - Sang trọng. Nhẹ nhàng - Tinh tế.'),
-	 (1,N'Bàn Trà Hiện Đại - Sang Trọng','bantraSP.jpg',N'Nhập khẩu cao cấp. Tiện nghi - Bền Bỉ. Hiện đại - Khác biện.'),
+	 (1,N'Bàn Trà Hiện Đại - Sang Trọng','bantraSP.jpg',N'Nhập khẩu cao cấp. Tiện nghi - Bền Bỉ. Hiện đại - Khác biệc.'),
 	 (1,N'Bàn Ăn Cổ  Điển - Ấm Cúng','bananSP.jpg',N'Sang trọng - Phóng Khoáng. Nghệ thuật - Ấm cúng. Hiện đại - Khác biệt')
 GO
 
@@ -95,7 +95,7 @@ INSERT INTO [dbo].[SANPHAM] ([MaLoaiSP],[MaNCC],[TenSP],[Giaban],[Mota],[AnhSP],
 
 			(3,1,N'Bàn gỗ',3000,N'Khích thướng, Make in USA','banan1.jpg',24-05-2021,5,1),
 			(3,1,N'Bàn gỗ',3000,N'Khích thướng, Make in USA','banan1.jpg',24-05-2021,5,1),
-			(3,1,N'Bàn gỗ',3000,N'Khích thướng, Make in USA','banan5.jpg',24-05-2021,5,1),
+			(3,1,N'Bàn gỗ',3000,N'Khích thướng, Make in USA','banan1.jpg',24-05-2021,5,1),
 			(3,1,N'Bàn tròn trắng',3000,N'Khích thướng, Make in USA','banan3.jpg',24-05-2021,5,1),
 
 			(1,1,N'Sopha',3000,N'Khích thướng, Make in USA','sp1.jpg',24-05-2021,5,1),
@@ -162,9 +162,9 @@ CREATE TABLE SLIDER
 )
 Go
 INSERT INTO [dbo].[SLIDER] ([LoaiSlider],[TenSP],[CapSP],[AnhSP],[Vitri],[Noidung1],[Noidung2],[Noidung3])
-						VALUES('DMSP',N'BÀN ĂN',N'CAO CẤP','dmend1.jpg',3,N'Sang Trọng - Phóng Khoáng',N'Nghệ Thuật - Ấm Cúng',N'Hiện Đại - Khác Biệt'),
-	 ('DMSP',N'BÀN TRÀ',N'PHONG CÁCH','dmend2.jpg',2,N'Nhập khẩu cao cấp',N'Tiện Nghi - Bền Bỉ',N'Hiện Đại - Khác Biệt'),
-	 ('DMSP',N'SOPHA DA',N'CAO CẤP','dmend3.jpg',1,N'Sopha da thật 100%',N'Đẳng cấp - Sang Trọng',N'Nhẹ Nhàng - Tinh Tế'),
+						VALUES('DMSP',N'BÀN ĂN',N'CAO CẤP','dm1.png',3,N'Sang Trọng - Phóng Khoáng',N'Nghệ Thuật - Ấm Cúng',N'Hiện Đại - Khác Biệt'),
+	 ('DMSP',N'BÀN TRÀ',N'PHONG CÁCH','dm2.png',2,N'Nhập khẩu cao cấp',N'Tiện Nghi - Bền Bỉ',N'Hiện Đại - Khác Biệt'),
+	 ('DMSP',N'SOPHA DA',N'CAO CẤP','dm3.png',1,N'Sopha da thật 100%',N'Đẳng cấp - Sang Trọng',N'Nhẹ Nhàng - Tinh Tế'),
 
 	 ('Banner',N'SANG TRỌNG',N'Đẳng cấp','Tinmain1.jpg',null,N'SANG TRỌNG ĐẲNG CẤP','Thương hiệu nội thất uy tín VIỆT NAM. TReES Decor mang lại cho bạn một chiếc áo mới cho gia đình bạn .Một không gian mới .Một ý tưởng mới',null),
 	 ('Banner',N'TReES Decor',N'Không gian xanh - Đậm chất riêng','Tinmain2.jpg',2,N'SKhông gian xanh . Đậm chất riêng của bạn',null,null),
@@ -175,7 +175,15 @@ INSERT INTO [dbo].[SLIDER] ([LoaiSlider],[TenSP],[CapSP],[AnhSP],[Vitri],[Noidun
 	 ('Slider',null,null,'ban3.jpg',null,null,null,null)
 		
 GO
+create table Admin
+(	UserAdmin varchar(30) primary key,
+	PassAdmin varchar(30) NOT NULL,
+	HoTen nvarchar(50)
+)
+GO
 
+Insert into Admin values ('admin','123456','GiaPhuc')
+Insert into Admin values ('staff','123456','GiaPhuc1')
 
 
 
