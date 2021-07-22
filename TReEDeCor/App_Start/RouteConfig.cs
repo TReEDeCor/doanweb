@@ -14,7 +14,7 @@ namespace TReEDeCor
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-                name: "PhroDuct",
+                name: "Tat Ca San Pham",
                 url: "san-pham",
                 defaults: new { controller = "PhroDuct", action = "Index", id = UrlParameter.Optional }
             );
@@ -42,8 +42,13 @@ namespace TReEDeCor
             routes.MapRoute(
               name: "DangNhap",
               url: "dang-nhap",
-              defaults: new { controller = "Dangnhap", action = "Nguoidung", id = UrlParameter.Optional }
+              defaults: new { controller = "NguoiDung", action = "Dangnhap", id = UrlParameter.Optional }
           );
+            routes.MapRoute(
+           name: "DangKy",
+           url: "dang-ky",
+           defaults: new { controller = "NguoiDung", action = "Dangky", id = UrlParameter.Optional }
+       );
             routes.MapRoute(
                 name: "Lien He",
                 url: "lien-he",

@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/MyCSS/all.min.css" rel="stylesheet" />
+    <link href="~/MyCSS/LayoutPage.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/font/font/themify-icons.css" rel="stylesheet" />
+</head>
+<body>
+        @Html.Action("Menu", "User")
+
+        <!--<ul id="nav">
+        <li> <a class="activee" href=" #">TRANG CHỦ </a></li>
+        <li>
+            <a href="@Url.Action("Index","PhroDuct")">SẢN PHẨM</a>
+            <ul class="subnav">
+                <li><a href="">Sopha Da Nhập Khẩu</a></li>
+                <li><a href="">Bàn Trà Hiện Đại - Sang Trọng</a></li>
+                <li><a href="">Bàn Ăn Cổ Điển - Ấm Cúng</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">
+                SHOWROM
+
+            </a>-->
+        @*<ul class="subnav">
+                <li><a href="">A</a></li>
+                <li><a href="">B</a></li>
+                <li><a href="">C</a></li>
+            </ul>*@
+
+        <!--</li>
+            <li>
+                <a href="#">
+                    KHÁCH HÀNG
+
+                </a>
+                <ul class="subnav">
+                    <li><a href="">Bảo Hành - Hậu Mãi</a></li>
+                    <li><a href="">Thực Tế - Khách Hàng</a></li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    TIN TỨC
+
+                </a>
+                <ul class="subnav">
+                    <li><a href="">Khuyến Mãi</a></li>
+                    <li><a href="">Kiến Thức nội thất</a></li>
+                    <li><a href="">Liên Hệ</a></li>
+                </ul>
+
+            </li>
+
+        </ul>-->
+        <!-- cuối nav -->
+        <!-- đầu search -->
+        <!--<div class="search-btn">
+            <i class=" search-ico ti-search">
+
+            </i>
+        </div>-->
+        <!-- cuối search -->
+    <!--</div>-->
+
+
+
+
+    @RenderBody()
+
+
+    <div id="ft">
+        <div class="container-fluid justify-content-center">
+            <div class="row py-2">
+                <div class="col">
+                    <div class="card border-0">
+                        <div class="card-body text-center ">
+                            <h2><b>Gửi thông tin liên hệ đến chúng tôi !</b></h2>
+                            <p class="pl-0 ml-0 mb-2">Ý tưởng của bạn là nguồn cảm hứng của chúng tôi ! Hãy để TReE'S Decor đến với bạn</p>
+                            <div class="row text-center justify-content-center">
+                                <div class="col-auto">
+                                    <div class="input-group-lg input-group mb-2 ">
+                                        <input type="text" class="form-control" placeholder="Nhập tài khoản gmail của bạn" aria-label="Recipient's username" aria-describedby="button-addon2">
+                                        <div class="input-group-append"><button class="btn btn-dark" type="button" id="button-addon2"> <b>Gửi</b></button></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="splitter"></div>
+            @*<hr class="mx-0 px-0">*@
+            <footer>
+                <div class="row justify-content-around mb-0 pt-2 pb-0 ">
+                    <div class=" col-9">
+                        <div class="row justify-content-center">
+                            <div class="col-md-3 col-12 font-italic align-items-center mt-md-3 mt-4">
+                                <h5><b class="text-dark"> TReE'S<span class="text-muted"> DeCor</span></b></h5>
+                                <p class="social mt-md-3 mt-2">
+                                    <span><i class="ti ti-facebook btn-info " aria-hidden="true"></i></span>
+                                    <span><i class="ti ti-linkedin btn-outline-danger" aria-hidden="true"></i></span>
+                                    <span><i class="ti ti-twitter btn-link" aria-hidden="true"></i></span>
+                                </p>
+                                <small class="copy-rights cursor-pointer">&#9400; 2021 Nội thất nâng tầm thế giới </small>
+                                <br>
+                                <small>Hãy tin dùng sản phẩm của TReE'SDeCor </small>
+                            </div>
+                            <div class="col-md-3 col-12 my-sm-0 mt-2">
+                                <ul class="list-unstyled">
+                                    <li class="mt-md-3 mt-4">SẢN PHẨM TReE's Decor</li>
+                                    <li>Sopha da nhập khẩu</li>
+                                    <li>Bàn trà hiện đại sang trọng</li>
+                                    <li>Bàn ăn cổ điển ấm cúng</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-2 col-12 my-sm-0 mt-2">
+                                <ul class="list-unstyled">
+                                    <li class="mt-md-3 mt-4">TIN TỨC</li>
+                                    <li>Chăm sóc khách hàng</li>
+                                    <li>Kiến thức Decor</li>
+                                    <li>Liên hệ</li>
+                                </ul>
+                            </div>
+                            <div class="col-xl-auto col-md-3 col-12 my-sm-0 mt-5">
+                                <ul class="list-unstyled">
+                                    <li class="mt-md-3 mt-4">NHÀ CUNG CẤP NỔI TIẾNG</li>
+                                    <li>Lippy-Shopha</li>
+                                    <li>Jessica-Italy</li>
+                                    <li>Merin-Bỷ</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/esm/popper.min.js"></script>
+    @*<script src="~/Scripts/jquery-3.4.1.min.js"></script>*@
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

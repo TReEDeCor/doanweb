@@ -204,5 +204,25 @@ namespace TReEDeCor.Controllers
             db.SubmitChanges();
             return RedirectToAction("Isslider", "Admin");
         }
+        public ActionResult Slider_Delete(int id)
+        {
+            if (Session["TKAdmin"] == null)
+            {
+                return RedirectToAction("Login", "Admin");
+            }
+            else
+            {
+                var s = from SLIDER in db.SLIDERs where SLIDER.MaSlider == id select SLIDER;
+                return View(s.SingleOrDefault());
+            }
+        }
+        [HttpPost, ActionName("Slider_Delete")]
+        public ActionResult xoaSlider(int id)
+        {
+            SLIDER s = db.SLIDERs.Where(n => n.MaSlider == id).SingleOrDefault();
+            db.SLIDERs.DeleteOnSubmit(s);
+            db.SubmitChanges();
+            return RedirectToAction("Isslider", "Admin");
+        }
     }
 }

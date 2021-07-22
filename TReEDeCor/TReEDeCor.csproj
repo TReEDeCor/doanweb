@@ -949,9 +949,12 @@
     <Content Include="Image\BAOHANH-HAUMAI\baohanhhaumai4.jpg" />
     <Content Include="Image\BAOHANH-HAUMAI\baohanhhaumai5.jpg" />
     <Content Include="Image\body1.png" />
-    <Content Include="Image\DMEND\dm1.png" />
-    <Content Include="Image\DMEND\dm2.png" />
-    <Content Include="Image\DMEND\dm3.png" />
+    <Content Include="Image\Tinmain1\ban1.jpg" />
+    <Content Include="Image\Tinmain1\ban2.jpg" />
+    <Content Include="Image\Tinmain1\ban3.jpg" />
+    <Content Include="Image\Tinmain1\dm1.png" />
+    <Content Include="Image\Tinmain1\dm2.png" />
+    <Content Include="Image\Tinmain1\dm3.png" />
     <Content Include="Image\DMEND\dmsp1.png" />
     <Content Include="Image\DMEND\dmsp2.png" />
     <Content Include="Image\DMEND\dmsp3.png" />
@@ -1008,6 +1011,7 @@
     <Content Include="Image\tintuccovi2.jpg" />
     <Content Include="MyCSS\all.min.css" />
     <Content Include="MyCSS\cart.css" />
+    <Content Include="MyCSS\dangnhap.css" />
     <Content Include="MyCSS\LayoutPage.css" />
     <Content Include="OwlCarousel2-2.3.4\OwlCarousel2-2.3.4\dist\assets\ajax-loader.gif" />
     <Content Include="OwlCarousel2-2.3.4\OwlCarousel2-2.3.4\dist\assets\owl.carousel.css" />
@@ -1333,6 +1337,8 @@
     <Content Include="Views\Admin\Slider_Details.cshtml" />
     <Content Include="Views\Admin\Slider_Create.cshtml" />
     <Content Include="Views\Admin\Slider_Edit.cshtml" />
+    <Content Include="Views\Admin\Slider_Delete.cshtml" />
+    <Content Include="Views\_LayoutPhroduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
