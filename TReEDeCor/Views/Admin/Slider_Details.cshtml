@@ -1,0 +1,83 @@
+﻿@model TReEDeCor.Models.SLIDER
+
+@{
+    ViewBag.Title = "Slider_Details";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Slider_Details</h2>
+
+<div>
+    <h4>SLIDER</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiSlider)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiSlider)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CapSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CapSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AnhSP)
+        </dt>
+
+        <dd>
+            <img src="@Url.Content("~/Image/DMEND/" + Model.AnhSP)" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vitri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vitri)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Noidung1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Noidung1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Noidung2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Noidung2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Noidung3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Noidung3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Slider_Edit", new { id = Model.MaSlider }) |
+    @Html.ActionLink("Back to List", "Isslider", "Admin")
+</p>

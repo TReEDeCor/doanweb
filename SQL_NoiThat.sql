@@ -6,6 +6,18 @@ GO
 use NoiThat
 GO
 
+
+GO
+create table Admin
+(	UserAdmin varchar(30) primary key,
+	PassAdmin varchar(30) NOT NULL,
+	HoTen nvarchar(50)
+)
+GO
+
+Insert into Admin values ('admin','123456','GiaPhuc')
+Insert into Admin values ('staff','123456','GiaPhuc1')
+
 CREATE TABLE NGUOIDUNG
 (
 	MaKH INT IDENTITY(1,1),
@@ -44,7 +56,6 @@ GO
 Create Table LOAISANPHAM
 (
 	MaLoaiSP int Identity(1,1),
-	MaNCC INT,
 	TenLoaiSP nvarchar(100),
 	AnhLoaiSP varchar(50),
 	Mota NVarchar(Max),
@@ -52,10 +63,10 @@ Create Table LOAISANPHAM
 	CONSTRAINT PK_Loaisanpham PRIMARY KEY(MaLoaiSP)
 )
 GO
-INSERT INTO [dbo].[LOAISANPHAM]([MaNCC],[TenLoaiSP],[AnhLoaiSP],[Mota])
-     VALUES(1,N'Sopha Da Nhập Khẩu','sophaSP.jpg',N'Sopha da thật 100%. Đẳng cấp - Sang trọng. Nhẹ nhàng - Tinh tế.'),
-	 (1,N'Bàn Trà Hiện Đại - Sang Trọng','bantraSP.jpg',N'Nhập khẩu cao cấp. Tiện nghi - Bền Bỉ. Hiện đại - Khác biệc.'),
-	 (1,N'Bàn Ăn Cổ  Điển - Ấm Cúng','bananSP.jpg',N'Sang trọng - Phóng Khoáng. Nghệ thuật - Ấm cúng. Hiện đại - Khác biệt')
+INSERT INTO [dbo].[LOAISANPHAM]([TenLoaiSP],[AnhLoaiSP],[Mota])
+     VALUES(N'Sopha Da Nhập Khẩu','sophaSP.jpg',N'Sopha da thật 100%. Đẳng cấp - Sang trọng. Nhẹ nhàng - Tinh tế.'),
+	 (N'Bàn Trà Hiện Đại - Sang Trọng','bantraSP.jpg',N'Nhập khẩu cao cấp. Tiện nghi - Bền Bỉ. Hiện đại - Khác biệc.'),
+	 (N'Bàn Ăn Cổ  Điển - Ấm Cúng','bananSP.jpg',N'Sang trọng - Phóng Khoáng. Nghệ thuật - Ấm cúng. Hiện đại - Khác biệt')
 GO
 
 
