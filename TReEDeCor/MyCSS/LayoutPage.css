@@ -1,11 +1,16 @@
 ﻿
 /*@media (min-width: 1200px) {
     .container {
-        max-width: 1200px;
+        max-width: 1200px;      120-190
     }
 }*/
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 
+}
 #new{
     background-color: none;
     padding: 100px;
@@ -112,7 +117,7 @@ header .sticky {
         line-height: 42px;
         display: block;
         position: relative;
-        height: 70px;
+        /*height: 70px;*/
         line-height: 70px;
         padding: 0 35px;
         box-sizing: border-box;
@@ -184,8 +189,10 @@ header .sticky {
 
         #nav .subnav li a {
             color: #fff;
-            padding: /*10px*/ 12px;
+            /*padding:*/ /*10px*/ /*12px;*/
             line-height: 38px;
+            padding: 20px;
+            padding-left: 35px;
         }
 
 #hd .logodc {

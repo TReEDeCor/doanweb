@@ -126,6 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="assets\PaymentRequest.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BHHMController.cs" />
     <Compile Include="Controllers\CartController.cs" />
@@ -138,6 +139,7 @@
     <Compile Include="Controllers\PhroDuctController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\SuKienController.cs" />
+    <Compile Include="Controllers\ThanhtoanMOMOController.cs" />
     <Compile Include="Controllers\TinTucController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -149,6 +151,7 @@
       <DependentUpon>Database.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\Giohang.cs" />
+    <Compile Include="assets\MOMO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1339,6 +1342,7 @@
     <Content Include="Views\Admin\Slider_Edit.cshtml" />
     <Content Include="Views\Admin\Slider_Delete.cshtml" />
     <Content Include="Views\_LayoutPhroduct.cshtml" />
+    <Content Include="Views\ThanhtoanMOMO\thanhtoantructuyen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
