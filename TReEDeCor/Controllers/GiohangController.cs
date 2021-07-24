@@ -134,6 +134,7 @@ namespace TReEDeCor.Controllers
             DONDATHANG dh = new DONDATHANG();
             NGUOIDUNG kh = (NGUOIDUNG)Session["Taikhoan"];
             List<Giohang> list = Laygiohang();
+
             dh.MaKH = kh.MaKH;
             dh.Ngaydat = DateTime.Now;
             var ngaygiao = String.Format("{0:MM//dd/yyyy}", frm["Ngaygiao"]);
@@ -169,11 +170,11 @@ namespace TReEDeCor.Controllers
             string accessKey = "m3vHuZl8qZoxniyv";
             string serectkey = "g90eux9ZDPl6uFqKjZNlCTy0yNWwBO2m";
             string orderInfo = "test";
-            string returnUrl = "https://localhost:44321/Giohang/thanhtoantructuyen";
-            /* string returnUrl = "https://localhost:44321/ThanhtoanMOMO/thanhtoantructuyen";*/ //localhost:44321
+            string returnUrl = "https://localhost:44321/xac-nhan-don-hang";
+            /* string returnUrl = "https://localhost:44321/xac-nhan-don-hang";*/ //localhost:44321
             string notifyurl = "http://ba1adf48beba.ngrok.io/Home/SavePayment";
      
-            string amount = "3.000";
+            string amount = "3000";
             string orderid = DateTime.Now.Ticks.ToString();
             string requestId = DateTime.Now.Ticks.ToString();
             string extraData = "";
@@ -216,11 +217,6 @@ namespace TReEDeCor.Controllers
             JObject jmessage = JObject.Parse(responseFromMomo);
 
             return Redirect(jmessage.GetValue("payUrl").ToString());
-        }
-
-        public ActionResult thanhtoantructuyen()
-        {
-            return View();
         }
 
     }
