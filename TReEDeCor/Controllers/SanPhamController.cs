@@ -119,7 +119,7 @@ namespace TReEDeCor.Controllers
                         }
                     }
                     spUpdate.MaLoaiSP = sanpham.MaLoaiSP;
-                    //spUpdate.MaNCC = sanpham.MaNCC;
+                    spUpdate.MaNCC = sanpham.MaNCC;
                     spUpdate.TenSP = sanpham.TenSP;
                     spUpdate.Giaban = sanpham.Giaban;
                     spUpdate.Mota = sanpham.Mota;
