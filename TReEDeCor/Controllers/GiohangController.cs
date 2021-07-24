@@ -150,18 +150,19 @@ namespace TReEDeCor.Controllers
                 ct.MaSP = i.idsp;
                 ct.Soluong = i.soluong;
                 ct.Dongia = (decimal)i.dongia;
+                ct.Tonggia = (decimal)i.tongtien;
                 data.CHITIETDATHANGs.InsertOnSubmit(ct);
             }
+            dh.Thanhtien = (decimal?)Tongtien();
             data.SubmitChanges();
             Session["Giohang"] = null;
-            //return RedirectToAction("Xacnhandonhang", "Giohang");
-            //return RedirectToAction("Payment", "ThanhtoanMOMO");
-            return RedirectToAction("Payment", "Giohang");
+            return RedirectToAction("Xacnhandonhang", "Giohang");
         }
         public ActionResult Xacnhandonhang()
         {
             return View();
         }
+
         public ActionResult Payment()
         {
             //request params need to request to MoMo system
@@ -171,10 +172,9 @@ namespace TReEDeCor.Controllers
             string serectkey = "g90eux9ZDPl6uFqKjZNlCTy0yNWwBO2m";
             string orderInfo = "test";
             string returnUrl = "https://localhost:44321/xac-nhan-don-hang";
-            /* string returnUrl = "https://localhost:44321/xac-nhan-don-hang";*/ //localhost:44321
-            string notifyurl = "http://ba1adf48beba.ngrok.io/Home/SavePayment";
-     
-            string amount = "3000";
+            string notifyurl = "http://ba1adf48beba.ngrok.io/Home/SavePayment"; //lưu ý: notifyurl không được sử dụng localhost, có thể sử dụng ngrok để public localhost trong quá trình test
+
+            string amount = Tongtien().ToString();
             string orderid = DateTime.Now.Ticks.ToString();
             string requestId = DateTime.Now.Ticks.ToString();
             string extraData = "";
