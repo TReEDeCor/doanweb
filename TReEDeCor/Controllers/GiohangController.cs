@@ -140,6 +140,8 @@ namespace TReEDeCor.Controllers
             dh.Ngaygiao = DateTime.Parse(ngaygiao);
             dh.Sdtnhanhang = Int32.Parse(kh.Dienthoai);
             dh.Diachigiaohang = kh.Diachi;
+            data.DONDATHANGs.InsertOnSubmit(dh);
+            data.SubmitChanges();
             foreach (var i in list)
             {
                 CHITIETDATHANG ct = new CHITIETDATHANG();
