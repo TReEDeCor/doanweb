@@ -184,7 +184,6 @@ header .sticky {
         transition: transform 0.5s;*/
         color: /*peru*/ darkgoldenrod;
         background: #fff;
-        padding: 0 35px;
         text-decoration: none;
         padding: 20px;
     }
