@@ -9,8 +9,7 @@ namespace TReEDeCor
 {
     public class MOMO
     {
-        private static RNGCryptoServiceProvider 
-            rngCsp = new RNGCryptoServiceProvider();
+        private static RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider();
         public MOMO()
         {
             //encrypt and decrypt password using secure

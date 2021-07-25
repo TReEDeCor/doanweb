@@ -1,59 +1,121 @@
 ﻿@model TReEDeCor.Models.LOAISANPHAM
 
-@{
-    ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
-}
+@{ ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml"; }
 
+<style>
+    .form-group {
+        width: 100%;
+        margin-bottom: 26px;
+    }
+
+    h2 {
+        padding-top: 50px;
+        text-align: center;
+        color: peru;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    .form-group .btn {
+        color: #ffffff;
+        background: peru;
+        padding: 5px;
+        border: 1px solid rgba(0,0,0,0.3);
+        width: 177px;
+        height: 41px;
+    }
+
+        .form-group .btn:hover {
+            color: #000;
+            background: #808080;
+            border: 1px solid rgba(0,0,0,0.3);
+            width: 177px;
+            height: 41px;
+        }
+
+    .form-horizontal {
+        width: 100%;
+        table-layout: fixed;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .tbl-content {
+        height: 475px;
+        overflow-y: scroll;
+        margin-top: 1px;
+        border: 1px solid rgba(223, 184, 145, 0.3);
+    }
+
+    section .toan {
+        margin: 0px;
+        background: -webkit-linear-gradient(left, rgb(243, 243, 243), #fff);
+        background: linear-gradient(to right, rgb(246, 247, 246), #fff);
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .duoi a {
+        color: #fff;
+    }
+
+        .duoi a:hover {
+            color: peru;
+        }
+</style>
 <h2>Create</h2>
-
-@using (Html.BeginForm("Create", "LoaiSanPham", FormMethod.Post, new { @enctype = "multipart/form-data" }))
-{
+<section class="toan">
+    <h4>LOAISANPHAM</h4>
+    <hr />
+    <div class="tbl-content">
+        @using (Html.BeginForm("Create", "LoaiSanPham", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+        {
     @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>LOAISANPHAM</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.TenLoaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TenLoaiSP, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TenLoaiSP, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                    <div class="form-horizontal">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.AnhLoaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-               <div class="col-md-10">
-                    <input type="file" name="fileUp" id="fileUp" />
-                    <img id="preview" src="#" width="150" height="100" style = "visibility:hidden" />
-                </div>
-            </div>
-        </div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Mota, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Mota, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Mota, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.TenLoaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.TenLoaiSP, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.TenLoaiSP, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.AnhLoaiSP, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                <div class="col-md-10">
+                                    <input type="file" name="fileUp" id="fileUp" />
+                                    <img id="preview" src="#" width="150" height="100" style="visibility:hidden" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.Mota, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10">
+                                @Html.EditorFor(model => model.Mota, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Mota, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>}
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
-@*Show ảnh vừa thêm*@
+        <div  class="duoi" style=" background:#000">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+        
+</section>
 <script>
     fileUp.onchange = evt => {
         const [file] = fileUp.files

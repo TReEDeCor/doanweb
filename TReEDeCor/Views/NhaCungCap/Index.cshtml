@@ -1,46 +1,129 @@
 ﻿@model IEnumerable<TReEDeCor.Models.NHACUNGCAP>
 
-@{
-    ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
-}
+@{ ViewBag.Title = "Index";
+   Layout = "~/Views/Shared/_LayoutAdmin.cshtml"; }
+<style>
 
-<h2>Index</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create" )
-</p>
-<table class="table" border="1">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.TenNCC)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Diachi)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DienThoai)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenNCC)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Diachi)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DienThoai)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaNCC }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaNCC }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaNCC })
-        </td>
-    </tr>
-}
+    h1 {
+        padding-top: 50px;
+        font-size: 30px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 100;
+        text-align: center;
+        margin-bottom: 15px;
+    }
 
-</table>
+    h2 {
+        font-size: 20px;
+    }
+
+    a {
+        color: #000;
+        text-decoration: none;
+        font-size: 15px;
+    }
+
+        a:hover {
+            font-size: 15px;
+            color: peru;
+            text-decoration: none;
+        }
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .tbl-header {
+        background-color:#000;
+        color:#fff;
+    }
+
+    .tbl-content {
+        height: 432px;
+        overflow-y: scroll;
+        margin-top: 1px;
+        border: 1px solid rgba(223, 184, 145, 0.3);
+        /*    width: 100%;*/
+    }
+
+    th {
+        padding: 20px 0px 20px 10px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    td {
+        padding: 20px;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: 300;
+        font-size: 14px;
+        color: #000;
+        border-bottom: solid 1px peru;
+    }
+
+
+    section .toan {
+        margin: 0px;
+        background: -webkit-linear-gradient(left, rgb(243, 243, 243), #fff);
+        background: linear-gradient(to right, rgb(246, 247, 246), #fff);
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
+
+    <section class="toan">
+        <!--for demo wrap-->
+        <h1>Bảng nhà cung cấp</h1>
+        <h2><i> @Html.ActionLink("Thêm Mới Sản Phẩm", "Create")</i>  </h2>
+        <div class="tbl-header">
+            <table cellpadding="0" border="0">
+                <thead>
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.TenNCC)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Diachi)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.DienThoai)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="tbl-content">
+            @foreach (var item in Model)
+            {
+
+    <table cellpadding="0" border="0">
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenNCC)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Diachi)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DienThoai)
+                </td>
+                <td>
+                    @Html.ActionLink("Sửa", "Edit", new { id = item.MaNCC }) |
+                    @Html.ActionLink("Chi Tiết", "Details", new { id = item.MaNCC }) |
+                    @Html.ActionLink("Xóa", "Delete", new { id = item.MaNCC })
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    }
+        </div>
+    </section>

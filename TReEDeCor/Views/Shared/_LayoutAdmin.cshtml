@@ -13,7 +13,7 @@
     <!-- <link rel="stylesheet" href="./assets/jscript.js"> -->
 
     <link href="~/Content/bootstrap-grid.css" rel="stylesheet" />
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+   
 </head>
 
 
@@ -23,14 +23,20 @@
         </div>
         <div id="sidebar-nav">
             <ul>
+               
+                <li class="active"><a href="#"> Dashboard</a></li>
+
                 <li><a href="@Url.Action("Index", "SanPham")"><i class="fa ti-pencil-alt"></i>Sản Phẩm</a></li>
                 <li><a href="@Url.Action( "Index", "NhaCungCap")"><i class="fa ti-flag-alt-2"></i>Nhà Cung Cấp</a></li>
                 <li><a href="@Url.Action("Index", "LoaiSanPham")"><i class="fa ti-harddrives"></i>Loại Sản Phẩm</a></li>
                 <li><a href="@Url.Action("Isslider", "Admin")"><i class="fa ti-layout-width-default"></i>Slider</a></li>
+                <li><a href="@Url.Action("Index", "LIENHE")"><i class="fa ti-mobile"></i>Liên Hệ</a></li>
+                <li><a href="@Url.Action("Index", "DoanhThu")"><i class="fa ti-wallet"></i>Đặt Hàng</a></li>
             </ul>
         </div>
     </section>
-    <section id="content">
+    <section id="content-1">
+
         <div id="header">
             <div class="header-nav">
                 <div class="menu-button">
@@ -53,21 +59,36 @@
                         <li class="nav-profile">
                             <div class="nav-profile-image">
                                 <img src="~/assets/img/thuhop.jpg.jpg" alt="profile-img" alt="profile image">
-                                <div class="nav-profile-name">login<i class="fa ti-power-off"></i></div>
+                                <div class="nav-profile-name">logout<i class="fa ti-power-off"></i></div>
                             </div>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
+            @*<div class="content-header">
+                <h1><b>Dashboard</b></h1>
+                <p>
+                    <b>welcome admin</b>
+                </p>
+            </div>*@
 
+        
+    
 
         @RenderBody()
-  
+
 
     </section>
 
     
+    <footer >
+
+    </footer>
+
+
+
+
     @Scripts.Render("~/bundles/jquery")
     @RenderSection("scripts", required: false)
 </body>

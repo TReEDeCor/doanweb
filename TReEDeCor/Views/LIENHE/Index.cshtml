@@ -1,0 +1,114 @@
+﻿@model IEnumerable<TReEDeCor.Models.LIENHE>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<style>
+
+
+    h1 {
+        padding-top: 50px;
+        font-size: 30px;
+        color: #000;
+        text-transform: uppercase;
+        font-weight: 100;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+  
+
+    table {
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .tbl-header {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .tbl-content {
+        height: 434px;
+        overflow-y: scroll;
+        margin-top: 1px;
+        border: 1px solid rgba(223, 184, 145, 0.3);
+    }
+
+    th {
+        padding: 20px 1px 20px 11px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 14px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    td {
+        padding: 20px;
+        text-align: center;
+        vertical-align: middle;
+        font-weight: 300;
+        font-size: 14px;
+        color: #000;
+        border-bottom: solid 1px peru;
+    }
+
+
+    section .toan {
+        margin: 0px;
+        background: -webkit-linear-gradient(left, rgb(243, 243, 243), #fff);
+        background: linear-gradient(to right, rgb(246, 247, 246), #fff);
+        font-family: 'Roboto', sans-serif;
+    }
+</style>
+
+<section class="toan">
+
+    <h1>Bảng liên hệ</h1>
+  
+    <div class="tbl-header">
+        <table cellpadding="0" border="0">
+            <thead>
+                <tr>
+                    <th>Họ & Tên </th>
+                    <th>Email </th>
+                    <th>Phone</th>
+                    <th>Ghi Chú</th>
+
+              
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <div class="tbl-content">
+        @foreach (var item in Model)
+        {
+
+            <table cellpadding="0" border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.HoTen)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Phone)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Ghichu)
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>}
+    </div>
+</section>
+
+
+
+
+

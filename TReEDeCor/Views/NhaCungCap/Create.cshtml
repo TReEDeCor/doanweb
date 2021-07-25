@@ -1,52 +1,115 @@
 ﻿@model TReEDeCor.Models.NHACUNGCAP
 
-@{
-    ViewBag.Title = "Create";
-    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
-}
+@{ ViewBag.Title = "Create";
+                Layout = "~/Views/Shared/_LayoutAdmin.cshtml"; }
 
+<style>
+    .form-group {
+        width: 100%;
+        margin-bottom: 26px;
+    }
+
+    h2 {
+        padding-top: 50px;
+        text-align: center;
+        color: peru;
+    }
+
+    h4 {
+        text-align: center;
+    }
+
+    .form-group .btn {
+        color: #ffffff;
+        background: peru;
+        padding: 5px;
+        border: 1px solid rgba(0,0,0,0.3);
+        width: 177px;
+        height: 41px;
+    }
+
+        .form-group .btn:hover {
+            color: #000;
+            background: #808080;
+            border: 1px solid rgba(0,0,0,0.3);
+            width: 177px;
+            height: 41px;
+        }
+
+    .form-horizontal {
+        width: 100%;
+        table-layout: fixed;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .tbl-content {
+        height: 475px;
+        overflow-y: scroll;
+        margin-top: 1px;
+        border: 1px solid rgba(223, 184, 145, 0.3);
+    }
+
+    section .toan {
+        margin: 0px;
+        background: -webkit-linear-gradient(left, rgb(243, 243, 243), #fff);
+        background: linear-gradient(to right, rgb(246, 247, 246), #fff);
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .duoi a {
+        color: #fff;
+    }
+
+        .duoi a:hover {
+            color: peru;
+        }
+</style>
 <h2>Create</h2>
+<section class="toan">
+    <h4>NHACUNGCAP</h4>
+    <hr />
+    <div class="tbl-content">
+        @using (Html.BeginForm())
+        {
+@Html.AntiForgeryToken()
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>NHACUNGCAP</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.TenNCC, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.TenNCC, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TenNCC, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                <div class="form-horizontal">
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.Diachi, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Diachi, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Diachi, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.TenNCC, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.TenNCC, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.TenNCC, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-        <div class="form-group">
-            @Html.LabelFor(model => model.DienThoai, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.DienThoai, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DienThoai, "", new { @class = "text-danger" })
-            </div>
-        </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Diachi, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.Diachi, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Diachi, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
 
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.DienThoai, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.DienThoai, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.DienThoai, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Create" class="btn btn-default" />
+                        </div>
+                    </div>
+                </div>}
     </div>
-}
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <div class="duoi" style=" background:#000">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+   
+</section>

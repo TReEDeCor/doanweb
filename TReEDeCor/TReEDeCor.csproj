@@ -131,14 +131,17 @@
     <Compile Include="Controllers\BHHMController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\DoanhThuController.cs" />
     <Compile Include="Controllers\GiohangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LIENHEController.cs" />
     <Compile Include="Controllers\LoaiSanPhamController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\NhaCungCapController.cs" />
     <Compile Include="Controllers\PhroDuctController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\SuKienController.cs" />
+    <Compile Include="Controllers\ThanhtoanMOMOController.cs" />
     <Compile Include="Controllers\TinTucController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -1341,6 +1344,9 @@
     <Content Include="Views\Admin\Slider_Edit.cshtml" />
     <Content Include="Views\Admin\Slider_Delete.cshtml" />
     <Content Include="Views\_LayoutPhroduct.cshtml" />
+    <Content Include="Views\ThanhtoanMOMO\thanhtoantructuyen.cshtml" />
+    <Content Include="Views\LIENHE\Index.cshtml" />
+    <Content Include="Views\DoanhThu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

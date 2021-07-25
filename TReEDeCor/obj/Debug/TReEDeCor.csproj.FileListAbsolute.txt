@@ -743,3 +743,195 @@ D:\Working\Github\TReEDeCor\obj\Debug\TReEDeCor.csproj.CoreCompileInputs.cache
 D:\Working\Github\TReEDeCor\obj\Debug\TReEDeCor.csproj.CopyComplete
 D:\Working\Github\TReEDeCor\obj\Debug\TReEDeCor.dll
 D:\Working\Github\TReEDeCor\obj\Debug\TReEDeCor.pdb
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\TReEDeCor.dll.config
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\TReEDeCor.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\TReEDeCor.pdb
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\csc.exe
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\csc.exe.config
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\csc.rsp
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\csi.exe
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\csi.exe.config
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\csi.rsp
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Buffers.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Memory.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\vbc.exe
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\vbc.exe.config
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\vbc.rsp
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\VBCSCompiler.exe
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\Antlr3.Runtime.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\Newtonsoft.Json.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\PagedList.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\PagedList.Mvc.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.Helpers.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.Mvc.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.Optimization.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.Razor.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.Razor.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\WebGrease.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\Newtonsoft.Json.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\PagedList.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\PagedList.Mvc.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.Helpers.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.Mvc.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.Optimization.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.Razor.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.Razor.xml
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\bin\Antlr3.Runtime.pdb
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.csproj.AssemblyReference.cache
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.csproj.CoreCompileInputs.cache
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.csproj.CopyComplete
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.dll
+C:\Users\HOP\Desktop\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.pdb
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\TReEDeCor.dll.config
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\TReEDeCor.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\TReEDeCor.pdb
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\csc.exe
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\csc.exe.config
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\csc.rsp
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\csi.exe
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\csi.exe.config
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\csi.rsp
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Buffers.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Memory.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\vbc.exe
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\vbc.exe.config
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\vbc.rsp
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\VBCSCompiler.exe
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\Antlr3.Runtime.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\Newtonsoft.Json.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\PagedList.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\PagedList.Mvc.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.Helpers.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.Mvc.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.Optimization.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.Razor.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.Deployment.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.Razor.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\WebGrease.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\Newtonsoft.Json.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\PagedList.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\PagedList.Mvc.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.Helpers.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.Mvc.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.Optimization.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.Razor.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.Deployment.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\System.Web.WebPages.Razor.xml
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\bin\Antlr3.Runtime.pdb
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.csprojAssemblyReference.cache
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.csproj.CoreCompileInputs.cache
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.csproj.CopyComplete
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.dll
+C:\Users\giaph\OneDrive\Máy tính\New folder\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.pdb
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\TReEDeCor.dll.config
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\TReEDeCor.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\TReEDeCor.pdb
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\csc.exe
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\csc.exe.config
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\csc.rsp
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\csi.exe
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\csi.exe.config
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\csi.rsp
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\System.Buffers.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\System.Memory.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\System.Numerics.Vectors.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\vbc.exe
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\vbc.exe.config
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\vbc.rsp
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\VBCSCompiler.exe
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\Antlr3.Runtime.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\Newtonsoft.Json.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\PagedList.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\PagedList.Mvc.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.Helpers.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.Mvc.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.Optimization.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.Razor.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.WebPages.Deployment.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.WebPages.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.WebPages.Razor.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\WebGrease.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\Newtonsoft.Json.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\PagedList.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\PagedList.Mvc.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.Helpers.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.Mvc.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.Optimization.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.Razor.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.WebPages.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.WebPages.Deployment.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\System.Web.WebPages.Razor.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\Antlr3.Runtime.pdb
+C:\Users\giaph\source\repos\doan\TReEDeCor\obj\Debug\TReEDeCor.csprojAssemblyReference.cache
+C:\Users\giaph\source\repos\doan\TReEDeCor\obj\Debug\TReEDeCor.csproj.CoreCompileInputs.cache
+C:\Users\giaph\source\repos\doan\TReEDeCor\obj\Debug\TReEDeCor.csproj.CopyComplete
+C:\Users\giaph\source\repos\doan\TReEDeCor\obj\Debug\TReEDeCor.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\obj\Debug\TReEDeCor.pdb
