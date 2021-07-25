@@ -33,15 +33,6 @@
       <Association Name="NGUOIDUNG_DONDATHANG" Member="NGUOIDUNG" ThisKey="MaKH" OtherKey="MaKH" Type="NGUOIDUNG" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.LIENHE" Member="LIENHEs">
-    <Type Name="LIENHE">
-      <Column Name="Malh" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="Ghichu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-    </Type>
-  </Table>
   <Table Name="dbo.LOAISANPHAM" Member="LOAISANPHAMs">
     <Type Name="LOAISANPHAM">
       <Column Name="MaLoaiSP" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
@@ -102,6 +93,15 @@
       <Column Name="Noidung1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Noidung2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="Noidung3" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.LIENHE" Member="LIENHEs">
+    <Type Name="LIENHE">
+      <Column Name="Malh" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Ghichu" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

@@ -104,6 +104,9 @@
             background: peru;
             border: 0.7px solid rgba(168, 162, 162, 0.5);
         }
+
+
+       
 </style>
 
 
@@ -115,11 +118,15 @@
     @using (Html.BeginForm("Index", "SanPham", FormMethod.Post, new { @class = "navbar-form navbar-right" }))
     {
         <div class="row">
-            <div class="col-md-4">
-                <input type="text" name="search"  />
+            <div class="col-md-10" style="padding-left:890px;">
+                <div class="timkiem">
+                    <input type="text" name="search" style="width:350px;height:35px ; background-color:white;color:darkslategrey;border-radius:50px;
+; border:double;" />
+                   
+                </div>
             </div>
-            <div class="col-md-4">
-                <button type="submit">Tìm Kiếm</button>
+            <div class="col-md-2" style="padding-left:140px;">
+                <button type="submit" style="height: 35px; background-color: black; color: white; border-top-right-radius: 20px; border-bottom-right-radius: 20px">Tìm Kiếm</button>
             </div>
         </div>
     }

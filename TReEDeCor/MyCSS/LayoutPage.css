@@ -550,7 +550,8 @@ h2 {
 .doanhmucwarpper {
     overflow: hidden;
     max-width: 97%;
-    padding-right: 65px;
+   /* padding-right: 20px;*/
+   padding-left: 20px;
 }
 
 .na img {
