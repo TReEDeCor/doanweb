@@ -107,6 +107,17 @@
     <!--for demo wrap-->
     <h1>Đặt Hàng</h1>
     <div class="tbl-header">
+        @using (Html.BeginForm("Index", "DoanhThu", FormMethod.Post, new { @class = "navbar-form navbar-right" }))
+        {
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="text" name="search" />
+                </div>
+                <div class="col-md-4">
+                    <button type="submit">Tìm Kiếm</button>
+                </div>
+            </div>
+        }
         <table cellpadding="0" border="0">
             <thead>
                 <tr>
@@ -134,7 +145,7 @@
                             @Html.DisplayFor(modelItem => item.Ngaydat)
                         </td>
                         <td>
-                            @Html.DisplayFor(modelItem => item.Ngaygiao)
+                            @String.Format("{0:dd/MM/yyyy}", item.Ngaygiao)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Sdtnhanhang)

@@ -1,25 +1,65 @@
 ﻿
 /*@media (min-width: 1200px) {
     .container {
-        max-width: 1200px;      120-190
+        max-width: 1200px;
     }
 }*/
-
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+}
+#treedecor{
+    background-color:white;
+    padding:50px;
+    text-align:center
+}
+    #treedecor h1{
+        color:black;
+        font-weight:bold;
+        font-weight:initial;
+        font-family:monospace;
+    }
+.tree2 img {
+    border-radius: 10px;
+}
+.tree2 {
+    position: absolute;
+    border: 0.7px solid;
+   
+    border-color: black;
+    border-radius: 10px;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    width:350px;
+    opacity: 0;
+    
+}
+.tree1:hover .tree2{
+    opacity:1;
+    
 
 }
-#new{
-    background-color: none;
-    padding: 100px;
-    text-align: center;
+.tree11:hover .tree2 {
+    opacity: 1;
 }
+.tree111:hover .tree2 {
+    opacity: 1;
+}
+
+
+    #new {
+        background-color: none;
+        padding: 100px;
+        text-align: center;
+    }
 .new1{
     background-color:black;
     border-radius:15%;
 }
+
 
 #headertop {
     display: flex;
@@ -30,12 +70,10 @@
     position: relative;
     top: 0;
     width: 100%;
-    
 }
+
     #headertop h4 {
-        
         color: white;
-       
     }
 
     #headertop a {
@@ -50,24 +88,6 @@
             opacity: 1;
         }
 
-/*#headercenter{
-    position:sticky;
-    top:0;
-    left:0;
-    width:100%;
-    
-   
-    
-}
-
-.center{
-    color: white;
-    background-color: none;
-    border-style: groove;
-    border-color: white;
-    padding:10px 10px;
-    
-}*/
 #hd {
     display: block;
     height: 70px;
@@ -90,7 +110,7 @@ header .sticky {
     /*display: inline-block;*/
     background: rgba(0,0,0,0.3);
     border: #777 solid 1px 0px;
-    padding: 0 50px;
+    padding: 0 13px;
     box-sizing: border-box;
     box-shadow: 0 1px 1px rgba(0,0,0,0.12), 0 2px 2px rgba(0,0,0,0.12), 0 4px 4px rgba(0,0,0,0.12), 0 8px 8px rgba(0,0,0,0.12), 0 16px 16px rgba(0,0,0,0.12);
 }
@@ -117,9 +137,9 @@ header .sticky {
         line-height: 42px;
         display: block;
         position: relative;
-        /*height: 70px;*/
+        height: 70px;
         line-height: 70px;
-        padding: 0 35px;
+        padding: 0 25px;
         box-sizing: border-box;
         color: white;
         transition: 0.5s;
@@ -161,13 +181,14 @@ header .sticky {
         color: /*peru*/ darkgoldenrod;
         background: #fff;
         text-decoration: none;
-        background: #fff;
+        padding: 20px;
     }
-  
+
     .subnav a:hover {
         color: /*peru*/ darkgoldenrod;
         background: none;
         text-decoration: none;
+        
     }
 
 
@@ -189,38 +210,114 @@ header .sticky {
 
         #nav .subnav li a {
             color: #fff;
-            /*padding:*/ /*10px*/ /*12px;*/
+            padding: /*10px*/ 12px;
             line-height: 38px;
-            padding: 20px;
-            padding-left: 35px;
         }
 
 #hd .logodc {
     float: left;
-    padding: 0 30px;
+    padding: 0 13px;
     bottom: 1px;
 }
-
-#hd .search-btn {
-    float: right;
-    padding: 3px 20px;
-}
-
-    #hd .search-btn:hover {
-        background-color: burlywood;
-        cursor: pointer;
-    }
 
 #hd .ico {
     line-height: 54px;
 }
-
-#hd .search-ico {
-    color: #fff;
-    font-size: 25px;
-    line-height: 50px;
+/*------------------------đầu nút sreach-------------------------------*/
+#hd .search-btn {
+    float: right;
+/*    padding: 15px 20px 2px;*/
+padding-top:10px;
+padding-right:10px;
 }
 
+    #hd .search-btn:hover {
+        background-color:/* #000*/ none;
+        cursor: pointer;
+        color: #fff;
+    }
+
+
+input {
+    outline: none;
+}
+
+    input[type=search] {
+        -webkit-appearance: textfield;
+        -webkit-box-sizing: content-box;
+        font-family: inherit;
+        font-size: 100%;
+    }
+
+    input::-webkit-search-decoration,
+    input::-webkit-search-cancel-button {
+        display: none;
+    }
+
+
+    input[type=search] {
+        background: #ededed url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png) no-repeat 9px center;
+        border: solid 1px #ccc;
+        padding: 9px 9px 9px 32px;
+        width: 0px;
+        -webkit-border-radius: 10em;
+        -moz-border-radius: 10em;
+        border-radius: 10em;
+        -webkit-transition: all .5s;
+        -moz-transition: all .5s;
+        transition: all .5s;
+    }
+
+        input[type=search]:focus {
+            width: 300px;
+            background-color: none;
+            border-color: gainsboro;
+            -webkit-box-shadow: 0 0 5px /*rgba(109,207,246,.5)*/ none;
+            -moz-box-shadow: 0 0 5px /*rgba(109,207,246,.5)*/ none;
+            box-shadow: 0 0 /*5px rgba(109,207,246,.5)*/ none;
+        }
+
+
+    input:-moz-placeholder {
+        color: /*#999*/ black;
+    }
+
+    input::-webkit-input-placeholder {
+        /* color: #999;*/
+        color: /*#999*/ black;
+    }
+
+/* tìm kiếm */
+#timkiem input[type=search] {
+    width: 25px;
+    padding-left: 10px;
+    color: transparent;
+    cursor: pointer;
+}
+
+    #timkiem input[type=search]:hover {
+        background-color: /*#fff*/ none;
+    }
+
+    #timkiem input[type=search]:focus {
+        width: 307px;
+        padding-left: 32px;
+        color: /*#000*/ white;
+        background-color: /*#fff*/ none;
+        cursor: auto;
+    }
+
+#timkiem input:-moz-placeholder {
+    color: transparent;
+}
+
+#timkiem input::-webkit-input-placeholder {
+    color: transparent;
+}
+
+
+
+////////////////////////////////////////////
 .activee {
     color: white;
     background-color: black;
@@ -411,7 +508,7 @@ h2 {
 }
 
 #dmend {
-    background-color: black;
+    /*background-color: black;*/
 /*    max-width:1349px;*/
         width:auto;
         box-sizing:border-box;
@@ -421,6 +518,7 @@ h2 {
         width: calc(100%/2);
         box-sizing:border-box;
     }*/
+   
 
 #owl-demo .item {
     background: #3fbf79;

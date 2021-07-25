@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -46,13 +47,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
     </Reference>
@@ -113,6 +108,9 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
@@ -123,9 +121,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="assets\MOMO.cs" />
     <Compile Include="assets\PaymentRequest.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BHHMController.cs" />
@@ -141,8 +145,9 @@
     <Compile Include="Controllers\PhroDuctController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\SuKienController.cs" />
-    <Compile Include="Controllers\ThanhtoanMOMOController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\TinTucController.cs" />
+    <Compile Include="Controllers\TREEDECORController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -153,7 +158,7 @@
       <DependentUpon>Database.dbml</DependentUpon>
     </Compile>
     <Compile Include="Models\Giohang.cs" />
-    <Compile Include="assets\MOMO.cs" />
+    <Compile Include="Models\TiemKiem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -565,20 +570,10 @@
     <Content Include="assets\style.css" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-grid.rtl.css" />
-    <Content Include="Content\bootstrap-grid.rtl.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap-reboot.rtl.css" />
-    <Content Include="Content\bootstrap-reboot.rtl.min.css" />
-    <Content Include="Content\bootstrap-utilities.css" />
-    <Content Include="Content\bootstrap-utilities.min.css" />
-    <Content Include="Content\bootstrap-utilities.rtl.css" />
-    <Content Include="Content\bootstrap-utilities.rtl.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\bootstrap.rtl.css" />
-    <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\PagedList.css" />
     <Content Include="favicon.ico" />
     <Content Include="font\font\demo-files\demo.css" />
@@ -945,24 +940,29 @@
     <Content Include="Image\ban1.jpg" />
     <Content Include="Image\ban2.jpg" />
     <Content Include="Image\ban3.jpg" />
+    <Content Include="Image\baner111.jpg" />
     <Content Include="Image\banner-4.jpg" />
     <Content Include="Image\banner.jpg" />
     <Content Include="Image\banner1.jpg" />
+    <Content Include="Image\banner222.jpg" />
     <Content Include="Image\BAOHANH-HAUMAI\baohanhhaumai1.png" />
     <Content Include="Image\BAOHANH-HAUMAI\baohanhhaumai2.jpg" />
     <Content Include="Image\BAOHANH-HAUMAI\baohanhhaumai3.jpg" />
     <Content Include="Image\BAOHANH-HAUMAI\baohanhhaumai4.jpg" />
     <Content Include="Image\BAOHANH-HAUMAI\baohanhhaumai5.jpg" />
     <Content Include="Image\body1.png" />
-    <Content Include="Image\Tinmain1\ban1.jpg" />
-    <Content Include="Image\Tinmain1\ban2.jpg" />
-    <Content Include="Image\Tinmain1\ban3.jpg" />
-    <Content Include="Image\Tinmain1\dm1.png" />
-    <Content Include="Image\Tinmain1\dm2.png" />
-    <Content Include="Image\Tinmain1\dm3.png" />
+    <Content Include="Image\DMEND\dm1.png" />
+    <Content Include="Image\DMEND\dm2.png" />
+    <Content Include="Image\DMEND\dm3.png" />
     <Content Include="Image\DMEND\dmsp1.png" />
     <Content Include="Image\DMEND\dmsp2.png" />
     <Content Include="Image\DMEND\dmsp3.png" />
+    <Content Include="Image\DMEND\tree1.jpg" />
+    <Content Include="Image\DMEND\tree11.jpg" />
+    <Content Include="Image\DMEND\tree2.jpg" />
+    <Content Include="Image\DMEND\tree22.jpg" />
+    <Content Include="Image\DMEND\tree3.jpg" />
+    <Content Include="Image\DMEND\tree33.jpg" />
     <Content Include="Image\DMPhroduct\dm1.jpg" />
     <Content Include="Image\DMPhroduct\dm4.jpg" />
     <Content Include="Image\DMPhroduct\main1.jpg" />
@@ -1014,9 +1014,11 @@
     <Content Include="Image\tintuc.jpg" />
     <Content Include="Image\tintuccovi.jpg" />
     <Content Include="Image\tintuccovi2.jpg" />
+    <Content Include="Image\TREEDECOR\TREE.jpg" />
+    <Content Include="Image\TREEDECOR\TREE1.jpg" />
+    <Content Include="Image\TREEDECOR\TREE2.jpg" />
     <Content Include="MyCSS\all.min.css" />
     <Content Include="MyCSS\cart.css" />
-    <Content Include="MyCSS\dangnhap.css" />
     <Content Include="MyCSS\LayoutPage.css" />
     <Content Include="OwlCarousel2-2.3.4\OwlCarousel2-2.3.4\dist\assets\ajax-loader.gif" />
     <Content Include="OwlCarousel2-2.3.4\OwlCarousel2-2.3.4\dist\assets\owl.carousel.css" />
@@ -1199,8 +1201,6 @@
     <Content Include="Powerful-Customizable-jQuery-Carousel-Slider-OWL-Carousel\Powerful-Customizable-jQuery-Carousel-Slider-OWL-Carousel\owl-carousel\owl.transitions.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
-    <Content Include="Scripts\bootstrap.esm.js" />
-    <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\Cart.js" />
@@ -1208,20 +1208,6 @@
     <Content Include="Scripts\esm\popper-utils.min.js" />
     <Content Include="Scripts\esm\popper.js" />
     <Content Include="Scripts\esm\popper.min.js" />
-    <Content Include="assets\font\themify-icons\fonts\themify.eot" />
-    <Content Include="assets\font\themify-icons\fonts\themify.ttf" />
-    <Content Include="assets\font\themify-icons\fonts\themify.woff" />
-    <Content Include="assets\font\themify-icons\Themify IconFonts 5-23-2014.json" />
-    <None Include="Scripts\jquery-3.6.0.intellisense.js" />
-    <Content Include="Scripts\jquery-3.6.0.js" />
-    <Content Include="Scripts\jquery-3.6.0.min.js" />
-    <Content Include="Scripts\jquery-3.6.0.slim.js" />
-    <Content Include="Scripts\jquery-3.6.0.slim.min.js" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
     <Content Include="Scripts\popper.js" />
@@ -1323,30 +1309,6 @@
     <Content Include="webfonts\fa-solid-900.ttf" />
     <Content Include="webfonts\fa-solid-900.woff" />
     <Content Include="webfonts\fa-solid-900.woff2" />
-    <Content Include="Views\NhaCungCap\Index.cshtml" />
-    <Content Include="Views\NhaCungCap\Details.cshtml" />
-    <Content Include="Views\NhaCungCap\Create.cshtml" />
-    <Content Include="Views\NhaCungCap\Edit.cshtml" />
-    <Content Include="Views\NhaCungCap\Delete.cshtml" />
-    <Content Include="Views\LoaiSanPham\Index.cshtml" />
-    <Content Include="Views\LoaiSanPham\Details.cshtml" />
-    <Content Include="Views\LoaiSanPham\Create.cshtml" />
-    <Content Include="Views\LoaiSanPham\Edit.cshtml" />
-    <Content Include="Views\LoaiSanPham\Delete.cshtml" />
-    <Content Include="Views\SanPham\Index.cshtml" />
-    <Content Include="Views\SanPham\Create.cshtml" />
-    <Content Include="Views\SanPham\Edit.cshtml" />
-    <Content Include="Views\SanPham\Delete.cshtml" />
-    <Content Include="Views\SanPham\Details.cshtml" />
-    <Content Include="Views\Admin\Isslider.cshtml" />
-    <Content Include="Views\Admin\Slider_Details.cshtml" />
-    <Content Include="Views\Admin\Slider_Create.cshtml" />
-    <Content Include="Views\Admin\Slider_Edit.cshtml" />
-    <Content Include="Views\Admin\Slider_Delete.cshtml" />
-    <Content Include="Views\_LayoutPhroduct.cshtml" />
-    <Content Include="Views\ThanhtoanMOMO\thanhtoantructuyen.cshtml" />
-    <Content Include="Views\LIENHE\Index.cshtml" />
-    <Content Include="Views\DoanhThu\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1448,6 +1410,12 @@
       <LastGenOutput>Database.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </Content>
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="Admin_Style\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
     <Content Include="Admin_Style\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
     <Content Include="Admin_Style\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
@@ -1521,22 +1489,10 @@
     <Content Include="Admin_Style\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
     <Content Include="Admin_Style\vendor\bootstrap\css\bootstrap.css.map" />
     <Content Include="Admin_Style\vendor\bootstrap\css\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.rtl.min.css.map" />
-    <Content Include="Content\bootstrap.rtl.css.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-utilities.rtl.min.css.map" />
-    <Content Include="Content\bootstrap-utilities.rtl.css.map" />
-    <Content Include="Content\bootstrap-utilities.min.css.map" />
-    <Content Include="Content\bootstrap-utilities.css.map" />
-    <Content Include="Content\bootstrap-reboot.rtl.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.rtl.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.rtl.min.css.map" />
-    <Content Include="Content\bootstrap-grid.rtl.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="assets\font\themify-icons\fonts\themify.eot" />
+    <Content Include="assets\font\themify-icons\fonts\themify.ttf" />
+    <Content Include="assets\font\themify-icons\fonts\themify.woff" />
+    <Content Include="assets\font\themify-icons\Themify IconFonts 5-23-2014.json" />
     <None Include="Models\Database.dbml.layout">
       <DependentUpon>Database.dbml</DependentUpon>
     </None>
@@ -1561,11 +1517,16 @@
     <Content Include="Powerful-Customizable-jQuery-Carousel-Slider-OWL-Carousel\Powerful-Customizable-jQuery-Carousel-Slider-OWL-Carousel\demos\json\data.json" />
     <Content Include="Powerful-Customizable-jQuery-Carousel-Slider-OWL-Carousel\Powerful-Customizable-jQuery-Carousel-Slider-OWL-Carousel\LICENSE" />
     <Content Include="Powerful-Customizable-jQuery-Carousel-Slider-OWL-Carousel\Powerful-Customizable-jQuery-Carousel-Slider-OWL-Carousel\README.md" />
+    <Content Include="Views\_LayoutPhroduct.cshtml" />
     <Content Include="Views\Shared\_LayoutUser.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
     <Content Include="Views\User\Doanhmucsanpham.cshtml" />
     <Content Include="Views\User\Quangcao.cshtml" />
     <Content Include="Views\PhroDuct\Index.cshtml" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Views\PhroDuct\Chitietsanpham.cshtml" />
     <Content Include="Views\User\SPtheoloai.cshtml" />
     <Content Include="Views\User\Menu.cshtml" />
@@ -1581,17 +1542,34 @@
     <Content Include="Views\Giohang\GiohangPartial.cshtml" />
     <Content Include="Views\Giohang\Dathang.cshtml" />
     <Content Include="Views\Giohang\Xacnhandonhang.cshtml" />
-    <Content Include="Views\Admin\Login.cshtml" />
-    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\TimKiem\TimKiemSP.cshtml" />
+    <Content Include="Views\TREEDECOR\TREE.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
-    <Content Include="Scripts\bootstrap.min.js.map" />
-    <Content Include="Scripts\bootstrap.js.map" />
-    <Content Include="Scripts\bootstrap.esm.min.js.map" />
-    <Content Include="Scripts\bootstrap.esm.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
-    <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Scripts\jquery-3.6.0.slim.min.map" />
-    <Content Include="Scripts\jquery-3.6.0.min.map" />
+    <Content Include="Views\Admin\Isslider.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
+    <Content Include="Views\Admin\Slider_Create.cshtml" />
+    <Content Include="Views\Admin\Slider_Delete.cshtml" />
+    <Content Include="Views\Admin\Slider_Details.cshtml" />
+    <Content Include="Views\Admin\Slider_Edit.cshtml" />
+    <Content Include="Views\DoanhThu\Index.cshtml" />
+    <Content Include="Views\LIENHE\Index.cshtml" />
+    <Content Include="Views\LoaiSanPham\Create.cshtml" />
+    <Content Include="Views\LoaiSanPham\Delete.cshtml" />
+    <Content Include="Views\LoaiSanPham\Details.cshtml" />
+    <Content Include="Views\LoaiSanPham\Edit.cshtml" />
+    <Content Include="Views\LoaiSanPham\Index.cshtml" />
+    <Content Include="Views\NhaCungCap\Create.cshtml" />
+    <Content Include="Views\NhaCungCap\Delete.cshtml" />
+    <Content Include="Views\NhaCungCap\Details.cshtml" />
+    <Content Include="Views\NhaCungCap\Edit.cshtml" />
+    <Content Include="Views\NhaCungCap\Index.cshtml" />
+    <Content Include="Views\SanPham\Create.cshtml" />
+    <Content Include="Views\SanPham\Delete.cshtml" />
+    <Content Include="Views\SanPham\Details.cshtml" />
+    <Content Include="Views\SanPham\Edit.cshtml" />
+    <Content Include="Views\SanPham\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\ThanhtoanMOMO\thanhtoantructuyen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
@@ -1629,12 +1607,11 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

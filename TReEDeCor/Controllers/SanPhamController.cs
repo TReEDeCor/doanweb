@@ -14,8 +14,9 @@ namespace TReEDeCor.Controllers
     {
         // GET: SanPham
         DatabaseDataContext db = new DatabaseDataContext();
-        public ActionResult Index(int? page)
+        public ActionResult Index(int? page, string search)
         {
+            List<SANPHAM> list = db.SANPHAMs.ToList();
             if (Session["TKAdmin"] == null)
             {
                 return RedirectToAction("Login", "Admin");
@@ -24,7 +25,12 @@ namespace TReEDeCor.Controllers
             {
                 int pageNumber = (page ?? 1);
                 int pageSize = 4;
-                return View(db.SANPHAMs.ToList().OrderBy(n => n.MaLoaiSP).ToPagedList(pageNumber, pageSize));
+                list = (db.SANPHAMs.ToList().OrderBy(n => n.MaLoaiSP).ToList());
+                if (!String.IsNullOrEmpty(search))
+                {
+                    list = (db.SANPHAMs.Where(x => x.TenSP.Contains(search)).ToList());
+                }
+                return View(list.ToPagedList(pageNumber,pageSize));
             }
         }
 
@@ -66,6 +72,7 @@ namespace TReEDeCor.Controllers
                 fileUp.SaveAs(path);
                 sanpham.AnhSP = fileName;
             }
+            sanpham.Ngaycapnhat = DateTime.Now;
             db.SANPHAMs.InsertOnSubmit(sanpham);
             db.SubmitChanges();
             return RedirectToAction("Index", "Admin");
@@ -123,7 +130,7 @@ namespace TReEDeCor.Controllers
                     spUpdate.TenSP = sanpham.TenSP;
                     spUpdate.Giaban = sanpham.Giaban;
                     spUpdate.Mota = sanpham.Mota;
-                    spUpdate.Ngaycapnhat = sanpham.Ngaycapnhat;
+                    spUpdate.Ngaycapnhat = DateTime.Now;
                     spUpdate.Soluongton = sanpham.Soluongton;
                     spUpdate.TrangThai = sanpham.TrangThai;
                     UpdateModel(spUpdate);

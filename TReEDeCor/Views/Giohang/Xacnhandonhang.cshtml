@@ -1,9 +1,27 @@
 ﻿
 @{
-    ViewBag.Title = "Xacnhandonhang";
+    ViewBag.Title = "Xác Nhận Đơn Hàng";
     Layout = "~/Views/_LayoutPhroduct.cshtml";
 }
+<style>
+    .xacnhandonhang a {
+        text-decoration: none;
+        color: black;
 
-<h2>Xacnhandonhang</h2>
-<a href="@Url.Action("Index","Home")">Trở về trang chủ</a>
+        font-weight:bold;
+        font-size:20px;
+    }
+</style>
 
+
+<div class="xacnhandonhang" style="background-color:black;padding:100px;text-align:center">
+    <div class="container">
+        &ensp;
+        <h1> Đặt hàng thành công ! <b> TReE's Decor </b> sẽ liên hệ với bạn đễ xác nhận đơn hàng . Gửi lời chúc tốt đẹp đến bạn  !</h1>
+        <div style="background-color:white; text-align:center;padding:10px;border:groove;
+                                    border-color:darkgray; border-radius:10px">
+            <a href="@Url.Action("Index","Home")">TRỞ VỀ TRANG CHỦ</a>
+            <i class="fa ti-arrow-right m-l-7" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>

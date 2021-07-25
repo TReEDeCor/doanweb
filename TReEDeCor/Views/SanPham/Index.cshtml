@@ -112,6 +112,17 @@
     <!--for demo wrap-->
     <h1>Bảng sản Phẩm</h1>
     <h2><i> @Html.ActionLink("Thêm Mới Sản Phẩm", "Create")</i></h2>
+    @using (Html.BeginForm("Index", "SanPham", FormMethod.Post, new { @class = "navbar-form navbar-right" }))
+    {
+        <div class="row">
+            <div class="col-md-4">
+                <input type="text" name="search"  />
+            </div>
+            <div class="col-md-4">
+                <button type="submit">Tìm Kiếm</button>
+            </div>
+        </div>
+    }
 
     <div class="tbl-header">
         <table cellpadding="0" border="0">

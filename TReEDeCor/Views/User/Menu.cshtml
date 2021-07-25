@@ -4,7 +4,7 @@
 
     <hr width="100%" align="center" />
 
-    <div class="col-md-6 py-1 text-left">
+    <div class="col-md-4 py-1 text-left">
         <b> TReE'S Decor Land</b>
         &nbsp;
         <b>|</b>
@@ -12,20 +12,27 @@
         <b>Call me </b>
     </div>
 
-    <div class="col-md-6 py-1 text-right">
+    <div class="col-md-8 py-1 text-right">
         @Html.Action("GiohangPartial", "Giohang")
         &nbsp;
         <b> |</b>
         &nbsp;
         <i class="far fa-user-circle"> </i>
-        <a href="@Url.Action("TestDN","NguoiDung")">
+        <a href="@Url.Action("Dangnhap","NguoiDung")">
 
             @{
                 var user = (NGUOIDUNG)Session["TaiKhoan"];
 
                 if (user != null)
                 {
+
+
                     <a href="">@user.HoTen</a>
+                   
+                    <b> |</b>
+                  
+                    <a href="@Url.Action("Dangxuat","NguoiDung")">Đăng Xuất</a>
+
                 }
                 else
                 {
@@ -37,10 +44,13 @@
         &nbsp;
         <b> |</b>
         &nbsp;
-        <i class="fas fa-phone-volume"> HOTLINE:</i>
-        <b>+843559673869</b>
-        <b> |</b>
-        <b>VN</b>
+        
+            <i class="fas fa-phone-volume"> HOTLINE:</i>
+            <b>+843559673869</b>
+            <b> |</b>
+            <b>VN</b>
+       
+        
     </div>
 
     <div class="splitter"></div>
@@ -79,15 +89,15 @@
             <a href="#">KHÁCH HÀNG</a>
             <ul class="subnav">
                 <li><a href="/bao-hanh-hau-mai">Bảo Hành - Hậu Mãi</a></li>
-                <li><a href="">Thực Tế - Khách Hàng</a></li>
+                <li><a href="/chuyen-tree-decor">Chuyện TReE'S Decor</a></li>
             </ul>
         </li>
         <li>
             <a href="/tin-tuc">TIN TỨC</a>
             <ul class="subnav">
                 <li><a href="/su-kien">SỰ KIỆN</a></li>
-                <li><a href="">Khuyến Mãi</a></li>
-                <li><a href="">Kiến Thức nội thất</a></li>
+                
+               
                 <li><a href="/lien-he">LIÊN HỆ</a></li>
             </ul>
         </li>
@@ -95,10 +105,22 @@
 
     <!-- đầu search -->
     <div class="search-btn">
-        <i class=" search-ico ti-search">
+        @*<i class=" search-ico ti-search" ></i>*@
+        @using (Html.BeginForm("TimKiemSP", "TimKiem", FormMethod.Get))
+        {
+            <div class="search-btn">
 
-        </i>
+                <form id="timkiem">
+                    <input type="search"  name="tk"  title="Type in a name" placeholder="..."
+                           style="background-color:black;color:white">
+                </form>
+            </div>
+           
+
+        }
+
     </div>
     <!-- cuối search -->
 </div>
+
 

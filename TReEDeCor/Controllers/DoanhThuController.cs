@@ -11,9 +11,14 @@ namespace TReEDeCor.Controllers
     {
         DatabaseDataContext db = new DatabaseDataContext();
         // GET: DoanhThu
-        public ActionResult Index()
+        public ActionResult Index(String search)
         {
-            return View(db.DONDATHANGs.ToList());
+            List<DONDATHANG> list = db.DONDATHANGs.ToList();
+            if (!String.IsNullOrEmpty(search))
+            {
+                list = db.DONDATHANGs.Where(x => x.MaKH.ToString().Contains(search)).ToList();
+            }
+            return View(list);
         }
     }
 }

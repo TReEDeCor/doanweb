@@ -164,6 +164,14 @@ namespace TReEDeCor.Controllers
             return View();
         }
 
+        public ActionResult Dangxuat()
+        {
+            Session.Clear();
+            return RedirectToAction("Index","Home");
+        }
+
+
+
 
     }
 }
