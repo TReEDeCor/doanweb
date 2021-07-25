@@ -155,9 +155,7 @@ namespace TReEDeCor.Controllers
             dh.Thanhtien = (decimal?)Tongtien();
             data.SubmitChanges();
             Session["Giohang"] = null;
-            //return RedirectToAction("Xacnhandonhang", "Giohang");
-            //return RedirectToAction("Payment", "ThanhtoanMOMO");
-            return RedirectToAction("Payment", "Giohang");
+            return RedirectToAction("Xacnhandonhang", "Giohang");
         }
         public ActionResult Xacnhandonhang()
         {
@@ -171,8 +169,7 @@ namespace TReEDeCor.Controllers
             string accessKey = "m3vHuZl8qZoxniyv";
             string serectkey = "g90eux9ZDPl6uFqKjZNlCTy0yNWwBO2m";
             string orderInfo = "test";
-            string returnUrl = "https://localhost:44321/Giohang/thanhtoantructuyen";
-            /* string returnUrl = "https://localhost:44321/ThanhtoanMOMO/thanhtoantructuyen";*/ //localhost:44321
+            string returnUrl = "https://localhost:44321/xac-nhan-don-hang";
             string notifyurl = "http://ba1adf48beba.ngrok.io/Home/SavePayment";
      
             string amount = Tongtien().ToString();
@@ -220,10 +217,6 @@ namespace TReEDeCor.Controllers
             return Redirect(jmessage.GetValue("payUrl").ToString());
         }
 
-        public ActionResult thanhtoantructuyen()
-        {
-            return View();
-        }
 
     }
 }

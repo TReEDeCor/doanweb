@@ -154,6 +154,7 @@
     </Compile>
     <Compile Include="Models\Giohang.cs" />
     <Compile Include="assets\MOMO.cs" />
+    <Compile Include="Models\TiemKiem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

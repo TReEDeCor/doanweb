@@ -1,24 +1,28 @@
 ﻿
 /*@media (min-width: 1200px) {
     .container {
-        max-width: 1200px;      120-190
+        max-width: 1200px; 122
     }
 }*/
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
-
 }
-#new{
+
+
+
+
+#new {
     background-color: none;
     padding: 100px;
     text-align: center;
 }
-.new1{
-    background-color:black;
-    border-radius:15%;
+
+.new1 {
+    background-color: black;
+    border-radius: 15%;
 }
 
 #headertop {
@@ -30,12 +34,10 @@
     position: relative;
     top: 0;
     width: 100%;
-    
 }
+
     #headertop h4 {
-        
         color: white;
-       
     }
 
     #headertop a {
@@ -117,7 +119,7 @@ header .sticky {
         line-height: 42px;
         display: block;
         position: relative;
-        /*height: 70px;*/
+        height: 70px;
         line-height: 70px;
         padding: 0 35px;
         box-sizing: border-box;
@@ -160,10 +162,11 @@ header .sticky {
         transition: transform 0.5s;*/
         color: /*peru*/ darkgoldenrod;
         background: #fff;
+        padding: 0 35px;
         text-decoration: none;
         background: #fff;
     }
-  
+
     .subnav a:hover {
         color: /*peru*/ darkgoldenrod;
         background: none;
@@ -227,7 +230,7 @@ header .sticky {
 }
 
 .row {
-    width:auto;
+    width: auto;
     /*max-width: 1349px;*/
     box-sizing: border-box;
     display: flex;
@@ -282,7 +285,6 @@ header .sticky {
     background-color: black;
     padding-top: 125px;
     padding-bottom: 0;
-  
 }
 
     .tinmain h1 {
@@ -412,12 +414,11 @@ h2 {
 
 #dmend {
     background-color: black;
-/*    max-width:1349px;*/
-        width:auto;
-        box-sizing:border-box;
-   
+    /*    max-width:1349px;*/
+    width: auto;
+    box-sizing: border-box;
 }
-   /* #dmend .col-md {
+/* #dmend .col-md {
         width: calc(100%/2);
         box-sizing:border-box;
     }*/
@@ -450,14 +451,13 @@ h2 {
 .doanhmucwarpper {
     overflow: hidden;
     max-width: 97%;
-    padding-right:65px;
+    padding-right: 65px;
 }
 
 .na img {
     max-width: 400px;
     max-height: 400px;
     overflow: hidden;
-   
 }
 
 .na a:hover {
@@ -481,12 +481,14 @@ h2 {
     text-decoration: none;
 }
 
-.name h1{
-    font-size:25px;
+.name h1 {
+    font-size: 25px;
 }
-.name h5{
-    font-size:15px;
+
+.name h5 {
+    font-size: 15px;
 }
+
 .name {
     position: absolute;
     letter-spacing: 2px;
@@ -523,10 +525,11 @@ h2 {
     padding-right: 20px;
     padding-left: 20px;
 }
-.tintucstyle img {
-   width:190px;
-   height:140px;
-}
+
+    .tintucstyle img {
+        width: 190px;
+        height: 140px;
+    }
 
     .tintucstyle h6 {
         color: darkgray;
@@ -535,8 +538,8 @@ h2 {
     .tintucstyle h5 {
         color: white;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-       
     }
+
     .tintucstyle h4 {
         font-size: 15px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -764,6 +767,3 @@ footer {
 #moqc {
     display: none;
 }
-
-
-

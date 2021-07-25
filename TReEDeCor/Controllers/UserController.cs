@@ -32,10 +32,22 @@ namespace TReEDeCor.Controllers
             var doanhmuc = from tt in data.SLIDERs select tt;
             return PartialView(doanhmuc);
         }
-        public ActionResult Menu()
+        public ActionResult Menu(string timkiem)
+
         {
-            var All_Loại = from loai in data.LOAISANPHAMs select loai;
-            return PartialView(All_Loại);
+            if (timkiem != null)
+            {
+                var tk = new TiemKiem();
+                var model = tk.TimKiemSanPham(timkiem);
+                return View(model);
+            }
+            else
+            {
+                var All_Loại = from loai in data.LOAISANPHAMs select loai;
+                return PartialView(All_Loại);
+            }
+
+
         }
 
         //SANPHAM them loai
