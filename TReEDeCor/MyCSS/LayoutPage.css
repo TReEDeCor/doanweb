@@ -1,5 +1,4 @@
-﻿
-/*@media (min-width: 1200px) {
+﻿/*@media (min-width: 1200px) {
     .container {
         max-width: 1200px;
     }
@@ -9,55 +8,59 @@
     padding: 0px;
     box-sizing: border-box;
 }
-#treedecor{
-    background-color:white;
-    padding:50px;
-    text-align:center
+
+#treedecor {
+    background-color: white;
+    padding: 50px;
+    text-align: center
 }
-    #treedecor h1{
-        color:black;
-        font-weight:bold;
-        font-weight:initial;
-        font-family:monospace;
+
+    #treedecor h1 {
+        color: black;
+        font-weight: bold;
+        font-weight: initial;
+        font-family: monospace;
     }
+
 .tree2 img {
     border-radius: 10px;
 }
+
 .tree2 {
     position: absolute;
     border: 0.7px solid;
-   
     border-color: black;
     border-radius: 10px;
     bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     transition: all 0.3s;
-    width:350px;
+    width: 350px;
     opacity: 0;
-    
 }
-.tree1:hover .tree2{
-    opacity:1;
-    
 
+.tree1:hover .tree2 {
+    opacity: 1;
 }
+
 .tree11:hover .tree2 {
     opacity: 1;
 }
+
 .tree111:hover .tree2 {
     opacity: 1;
 }
 
 
-    #new {
-        background-color: none;
-        padding: 100px;
-        text-align: center;
-    }
-.new1{
-    background-color:black;
-    border-radius:15%;
+#new {
+    background-color: none;
+    padding: 100px;
+    text-align: center;
+}
+
+.new1 {
+    background-color: black;
+    border-radius: 15%;
 }
 
 
@@ -139,7 +142,7 @@ header .sticky {
         position: relative;
         height: 70px;
         line-height: 70px;
-        padding: 0 25px;
+        padding: 0 35px;
         box-sizing: border-box;
         color: white;
         transition: 0.5s;
@@ -188,7 +191,6 @@ header .sticky {
         color: /*peru*/ darkgoldenrod;
         background: none;
         text-decoration: none;
-        
     }
 
 
@@ -210,7 +212,9 @@ header .sticky {
 
         #nav .subnav li a {
             color: #fff;
-            padding: /*10px*/ 12px;
+            /*padding:*/ /*10px*/ /*12px;*/
+            padding: 20px;
+            padding-left: 35px;
             line-height: 38px;
         }
 
@@ -226,13 +230,13 @@ header .sticky {
 /*------------------------đầu nút sreach-------------------------------*/
 #hd .search-btn {
     float: right;
-/*    padding: 15px 20px 2px;*/
-padding-top:10px;
-padding-right:10px;
+    /*    padding: 15px 20px 2px;*/
+    padding-top: 7px;
+    padding-right: 10px;
 }
 
     #hd .search-btn:hover {
-        background-color:/* #000*/ none;
+        background-color: /* #000*/ none;
         cursor: pointer;
         color: #fff;
     }
@@ -324,7 +328,7 @@ input {
 }
 
 .row {
-    width:auto;
+    width: auto;
     /*max-width: 1349px;*/
     box-sizing: border-box;
     display: flex;
@@ -379,7 +383,6 @@ input {
     background-color: black;
     padding-top: 125px;
     padding-bottom: 0;
-  
 }
 
     .tinmain h1 {
@@ -509,16 +512,15 @@ h2 {
 
 #dmend {
     /*background-color: black;*/
-/*    max-width:1349px;*/
-        width:auto;
-        box-sizing:border-box;
-   
+    /*    max-width:1349px;*/
+    width: auto;
+    box-sizing: border-box;
 }
-   /* #dmend .col-md {
+/* #dmend .col-md {
         width: calc(100%/2);
         box-sizing:border-box;
     }*/
-   
+
 
 #owl-demo .item {
     background: #3fbf79;
@@ -548,14 +550,13 @@ h2 {
 .doanhmucwarpper {
     overflow: hidden;
     max-width: 97%;
-    padding-right:65px;
+    padding-right: 65px;
 }
 
 .na img {
     max-width: 400px;
     max-height: 400px;
     overflow: hidden;
-   
 }
 
 .na a:hover {
@@ -579,12 +580,14 @@ h2 {
     text-decoration: none;
 }
 
-.name h1{
-    font-size:25px;
+.name h1 {
+    font-size: 25px;
 }
-.name h5{
-    font-size:15px;
+
+.name h5 {
+    font-size: 15px;
 }
+
 .name {
     position: absolute;
     letter-spacing: 2px;
@@ -621,10 +624,11 @@ h2 {
     padding-right: 20px;
     padding-left: 20px;
 }
-.tintucstyle img {
-   width:190px;
-   height:140px;
-}
+
+    .tintucstyle img {
+        width: 190px;
+        height: 140px;
+    }
 
     .tintucstyle h6 {
         color: darkgray;
@@ -633,8 +637,8 @@ h2 {
     .tintucstyle h5 {
         color: white;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-       
     }
+
     .tintucstyle h4 {
         font-size: 15px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -862,6 +866,3 @@ footer {
 #moqc {
     display: none;
 }
-
-
-
