@@ -2,7 +2,7 @@
 
 
 
-@font-face {
+/*@font-face {
   font-family: Ubuntu-Regular;
   src: url('../fonts/ubuntu/Ubuntu-Regular.ttf'); 
 }
@@ -10,7 +10,7 @@
 @font-face {
   font-family: Ubuntu-Bold;
   src: url('../fonts/ubuntu/Ubuntu-Bold.ttf'); 
-}
+}*/
 
 
 
@@ -30,7 +30,7 @@ a {
 	font-family: Ubuntu-Regular;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color:white;
 	margin: 0px;
 	transition: all 0.4s;
 	-webkit-transition: all 0.4s;
@@ -39,7 +39,7 @@ a {
 }
 
 a:focus {
-	outline: none !important;
+	outline: none ;
 }
 
 a:hover {
@@ -56,7 +56,7 @@ p {
 	font-family: Ubuntu-Regular;
 	font-size: 14px;
 	line-height: 1.7;
-	color: #666666;
+	color: white;
 	margin: 0px;
 }
 
@@ -78,28 +78,31 @@ textarea {
 }
 
 textarea:focus, input:focus {
-  border-color: transparent !important;
+  border-color: transparent ;
 }
 
-input:focus::-webkit-input-placeholder { color:transparent; }
-input:focus:-moz-placeholder { color:transparent; }
-input:focus::-moz-placeholder { color:transparent; }
-input:focus:-ms-input-placeholder { color:transparent; }
+input:focus::-webkit-input-placeholder { color:white; }
+input:focus:-moz-placeholder { color:white; }
+input:focus::-moz-placeholder { color:white; }
+input:focus:-ms-input-placeholder { color:white; }
 
-textarea:focus::-webkit-input-placeholder { color:transparent; }
-textarea:focus:-moz-placeholder { color:transparent; }
+textarea:focus::-webkit-input-placeholder { color:white; }
+textarea:focus:-moz-placeholder { color:white; }
 textarea:focus::-moz-placeholder { color:transparent; }
-textarea:focus:-ms-input-placeholder { color:transparent; }
+textarea:focus:-ms-input-placeholder { color:white; }
 
-input::-webkit-input-placeholder { color: #555555;}
-input:-moz-placeholder { color: #555555;}
-input::-moz-placeholder { color: #555555;}
-input:-ms-input-placeholder { color: #555555;}
+input::-webkit-input-placeholder { color: white;}
+input:-moz-placeholder { color: white;}
+input::-moz-placeholder { color: white;}
+input:-ms-input-placeholder { color:white;}
 
-textarea::-webkit-input-placeholder { color: #555555;}
-textarea:-moz-placeholder { color: #555555;}
-textarea::-moz-placeholder { color: #555555;}
-textarea:-ms-input-placeholder { color: #555555;}
+textarea::-webkit-input-placeholder { color: white;}
+textarea:-moz-placeholder {
+	color: white;
+	
+}
+textarea::-moz-placeholder { color: white;}
+textarea:-ms-input-placeholder { color: white;}
 
 label {
   margin: 0;
@@ -127,7 +130,7 @@ iframe {
 .txt1 {
   font-family: Poppins-Regular;
   font-size: 13px;
-  color: #e5e5e5;
+  color: white;
   line-height: 1.5;
 }
 
@@ -177,7 +180,7 @@ iframe {
   border-radius: 10px;
   overflow: hidden;
 
-  background: transparent;
+  background: none;
 }
 
 
@@ -187,12 +190,12 @@ iframe {
 .login100-form {
   width: 100%;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: none;
 }
 
 .login100-form-logo {
   font-size: 60px; 
-  color: #333333;
+  color: white;
 
   display: -webkit-box;
   display: -webkit-flex;
@@ -204,14 +207,15 @@ iframe {
   width: 120px;
   height: 120px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: none;
   margin: 0 auto;
 }
 
 .login100-form-title {
-  font-family: Ubuntu-Bold;
+  font-family: monospace;
+  font-weight:bold;
   font-size: 28px;
-  color: #fff;
+  color: white;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
@@ -225,64 +229,70 @@ iframe {
 
 .wrap-input100 {
   width: 100%;
+  color:white;
   position: relative;
   border-bottom: 1px solid #e6e6e6;
   padding: 29px 0;
 }
 
 .input100 {
-  font-family: Ubuntu-Regular;
+  font-family: monospace;
   font-size: 20px;
-  color: #555555;
+  color:white;
   line-height: 1.2;
 
   display: block;
   width: 100%;
   height: 50px;
-  background: transparent;
+  background: none;
   padding: 0 10px 0 80px;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
+
   transition: all 0.4s;
 }
 
-/*---------------------------------------------*/ 
+/*---------------------------------------------*/
 .focus-input100 {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
+	position: absolute;
+	display: block;
+	color: white;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
 }
 
-.focus-input100::before {
-  content: "";
-  display: block;
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 0;
-  height: 1px;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
-
-  background: #d41872;
+	.focus-input100::before {
+		content: "";
+		display: block;
+		position: absolute;
+		bottom: -1px;
+		left: 0;
+		width: 0;
+		height: 1px;
+		-webkit-transition: all 0.4s;
+		-o-transition: all 0.4s;
+		-moz-transition: all 0.4s;
+		transition: all 0.4s;
+		/*background: #d41872;
   background: -webkit-linear-gradient(left, #a445b2, #d41872, #fa4299);
   background: -o-linear-gradient(left, #a445b2, #d41872, #fa4299);
   background: -moz-linear-gradient(left, #a445b2, #d41872, #fa4299);
-  background: linear-gradient(left, #a445b2, #d41872, #fa4299);
-}
+  background: linear-gradient(left, #a445b2, #d41872, #fa4299);*/
+		background: /* #d41872;*/ peru;
+		background: -webkit-linear-gradient(left, white, peru, gold);
+	background: -o-linear-gradient(left, white,peru,gold);
+	background: -moz-linear-gradient(left, white, peru, gold);
+	background: linear-gradient(left, white, peru,gold);
+	}
 
 .focus-input100::after {
   font-family: Linearicons-Free;
   font-size: 18px;
-  color: #999999;
+  color: white;
 
   content: attr(data-placeholder);
   display: block;
@@ -300,11 +310,12 @@ iframe {
 
 .input100:focus {
   padding-left: 60px;
+
 }
 
 .input100:focus + .focus-input100::after {
   left: 23px;
-  color: #d41872;
+  color: none;
 }
 
 .input100:focus + .focus-input100::before {
@@ -313,7 +324,7 @@ iframe {
 
 .has-val.input100 + .focus-input100::after {
   left: 23px;
-  color: #d41872;
+  color: peru;
 }
 
 .has-val.input100 + .focus-input100::before {
@@ -339,36 +350,33 @@ iframe {
 }
 
 .login100-form-btn {
-  font-family: Ubuntu-Bold;
-  font-size: 18px;
-  color: #fff;
-  line-height: 1.2;
-  text-transform: uppercase;
-
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  min-width: 160px;
-  height: 42px;
-  border-radius: 21px;
-
-  background: #d41872;
-  background: -webkit-linear-gradient(left, #a445b2, #d41872, #fa4299);
-  background: -o-linear-gradient(left, #a445b2, #d41872, #fa4299);
-  background: -moz-linear-gradient(left, #a445b2, #d41872, #fa4299);
-  background: linear-gradient(left, #a445b2, #d41872, #fa4299);
-  position: relative;
-  z-index: 1;
-
-  -webkit-transition: all 0.4s;
-  -o-transition: all 0.4s;
-  -moz-transition: all 0.4s;
-  transition: all 0.4s;
+	font-family: Ubuntu-Bold;
+	font-size: 18px;
+	color: white;
+	line-height: 1.2;
+	text-transform: uppercase;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 20px;
+	min-width: 160px;
+	height: 42px;
+	border-radius: 21px;
+	background: /* #d41872;*/ peru;
+	/*background: -webkit-linear-gradient(left, white, peru, gold);
+	background: -o-linear-gradient(left, white,peru,gold);
+	background: -moz-linear-gradient(left, white, peru, gold);
+	background: linear-gradient(left, white, peru,gold);*/
+	position: relative;
+	z-index: 1;
+	-webkit-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	transition: all 0.4s;
 }
 
 .login100-form-btn::before {
@@ -411,7 +419,7 @@ iframe {
   content: attr(data-validate);
   position: absolute;
   max-width: 70%;
-  background-color: #fff;
+  background-color: none;
   border: 1px solid #c80000;
   border-radius: 2px;
   padding: 4px 25px 4px 10px;
@@ -425,7 +433,7 @@ iframe {
   pointer-events: none;
 
   font-family: Ubuntu-Bold;
-  color: #c80000;
+  color: white;
   font-size: 13px;
   line-height: 1.4;
   text-align: left;
@@ -443,7 +451,7 @@ iframe {
   content: "\f12a";
   font-family: FontAwesome;
   font-size: 16px;
-  color: #c80000;
+  color: white;
 
   display: block;
   position: absolute;

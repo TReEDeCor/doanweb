@@ -152,6 +152,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Database.cs">
+      <DependentUpon>Database.dbml</DependentUpon>
+    </Compile>
     <Compile Include="Models\Database.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -566,6 +569,10 @@
     <Content Include="assets\font\themify-icons\SVG\zoom-in.svg" />
     <Content Include="assets\font\themify-icons\SVG\zoom-out.svg" />
     <Content Include="assets\font\themify-icons\themify-icons.css" />
+    <Content Include="assets\img\admin1.jpg" />
+    <Content Include="assets\img\admin2.jpg" />
+    <Content Include="assets\img\admin3.jpg" />
+    <Content Include="assets\img\admin4.jpg" />
     <Content Include="assets\img\thuhop.jpg.jpg" />
     <Content Include="assets\style.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -940,9 +947,6 @@
     <Content Include="Image\ban1.jpg" />
     <Content Include="Image\ban2.jpg" />
     <Content Include="Image\ban3.jpg" />
-    <Content Include="Image\Tinmain1\ban1.jpg" />
-    <Content Include="Image\Tinmain1\ban2.jpg" />
-    <Content Include="Image\Tinmain1\ban3.jpg" />
     <Content Include="Image\baner111.jpg" />
     <Content Include="Image\banner-4.jpg" />
     <Content Include="Image\banner.jpg" />
@@ -1010,6 +1014,9 @@
     <Content Include="Image\sophaquang cao 2.jpg" />
     <Content Include="Image\sukien1.jpg" />
     <Content Include="Image\sukien2.jpg" />
+    <Content Include="Image\Tinmain1\ban1.jpg" />
+    <Content Include="Image\Tinmain1\ban2.jpg" />
+    <Content Include="Image\Tinmain1\ban3.jpg" />
     <Content Include="Image\Tinmain1\dm1.png" />
     <Content Include="Image\Tinmain1\dm2.png" />
     <Content Include="Image\Tinmain1\dm3.png" />

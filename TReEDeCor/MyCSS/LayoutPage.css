@@ -1,4 +1,5 @@
-﻿/*@media (min-width: 1200px) {
+﻿
+/*@media (min-width: 1200px) {
     .container {
         max-width: 1200px;
     }
@@ -142,7 +143,7 @@ header .sticky {
         position: relative;
         height: 70px;
         line-height: 70px;
-        padding: 0 35px;
+        padding: 0 25px;
         box-sizing: border-box;
         color: white;
         transition: 0.5s;
@@ -231,7 +232,7 @@ header .sticky {
 #hd .search-btn {
     float: right;
     /*    padding: 15px 20px 2px;*/
-    padding-top: 7px;
+    padding-top: 10px;
     padding-right: 10px;
 }
 
@@ -550,8 +551,7 @@ h2 {
 .doanhmucwarpper {
     overflow: hidden;
     max-width: 97%;
-   /* padding-right: 20px;*/
-   padding-left: 20px;
+    padding-right: 65px;
 }
 
 .na img {
