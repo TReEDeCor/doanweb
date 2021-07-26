@@ -159,6 +159,7 @@ namespace TReEDeCor.Controllers
         }
         public ActionResult Xacnhandonhang()
         {
+            Session["Giohang"] = null;
             return View();
         }
         public ActionResult Payment()
@@ -170,7 +171,7 @@ namespace TReEDeCor.Controllers
             string serectkey = "g90eux9ZDPl6uFqKjZNlCTy0yNWwBO2m";
             string orderInfo = "test";
             string returnUrl = "https://localhost:44321/xac-nhan-don-hang";
-            string notifyurl = "http://ba1adf48beba.ngrok.io/Home/SavePayment";
+            string notifyurl = "http://localhost:44321/Giohang/SavePayment";
 
             string amount = Tongtien().ToString();
             string orderid = DateTime.Now.Ticks.ToString();
@@ -216,7 +217,11 @@ namespace TReEDeCor.Controllers
 
             return Redirect(jmessage.GetValue("payUrl").ToString());
         }
-
-
+        [HttpPost]
+        public ActionResult SavePayment(FormCollection frm)
+        {
+            Session["Giohang"] = null;
+            return RedirectToAction("Xacnhandonhang", "Giohang");
+        }
     }
 }

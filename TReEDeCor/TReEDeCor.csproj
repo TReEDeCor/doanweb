@@ -937,6 +937,9 @@
     <Content Include="font\font\themify-icons.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\ban1.jpg" />
+    <Content Include="Image\ban2.jpg" />
+    <Content Include="Image\ban3.jpg" />
     <Content Include="Image\Tinmain1\ban1.jpg" />
     <Content Include="Image\Tinmain1\ban2.jpg" />
     <Content Include="Image\Tinmain1\ban3.jpg" />
