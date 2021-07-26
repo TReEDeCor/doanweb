@@ -107,10 +107,7 @@
             <div class="col-12"><h1>ĐẶT HÀNG </h1> </div>
 
         </div>
-
-
     </div>
-
     <div class="row">
         <div class="col-8 " style="padding-top:50px">
 
@@ -138,8 +135,8 @@
                     </tr>
                 }
                 <tr style="font-weight:bold; text-align:center">
-                    <td colspan="4" style="text-align:right; background-color:black;color:white;"> So luong: @ViewBag.Tongsoluong</td>
-                    <td colspan="4" style="text-align:right; background-color:black;color:white;"> Tong tien: @String.Format("{0:0,0}", ViewBag.Tongtien) VND</td>
+                    <td colspan="4" style="text-align:right; background-color:black;color:white;"> Số Lượng: @ViewBag.Tongsoluong</td>
+                    <td colspan="4" style="text-align:right; background-color:black;color:white;"> Tổng Tiềns: @String.Format("{0:0,0}", ViewBag.Tongtien) VND</td>
                 </tr>
 
             </table>
@@ -147,11 +144,11 @@
         <div class="col-4">
             <h2 style="text-align: center; font-family: Courier New, Courier, monospace;color:white"> THÔNG TIN KHÁCH HÀNG</h2>
             <div class="ttkh" style="background-color: white; color:black; border: solid; font-weight:bold;
-                 border-radius: 15px; padding: 55px;padding-bottom:160px;padding-right:15px;">
+                 border-radius: 15px; padding: 55px;padding-bottom:160px;padding-right:15px">
                 @using TReEDeCor.Models
 
                 @{
-                    NGUOIDUNG kh = (NGUOIDUNG)Session["Taikhoan"]; 
+                    NGUOIDUNG kh = (NGUOIDUNG)Session["Taikhoan"];
                 }
                 <table>
                     @using (Html.BeginForm())
@@ -174,9 +171,8 @@
                             <td>@DateTime.Now.ToShortDateString()</td>
                         </tr>
                         <tr style="height: 40px; border: none;">
-                                <td> Ngày giao: </td>
-                                <td> <input type="date" name="Ngaygiao" /></td>
-                                 @ViewData["loi1"];
+                            <td> Ngày giao: </td>
+                            <td> <input required type="date" name="Ngaygiao" /></td>
                         </tr>
                         <tr style="height:40px">
                             <td> </td>

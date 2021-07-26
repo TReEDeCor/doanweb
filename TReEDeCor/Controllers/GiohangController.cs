@@ -137,24 +137,25 @@ namespace TReEDeCor.Controllers
             dh.MaKH = kh.MaKH;
             dh.Ngaydat = DateTime.Now;
             var ngaygiao = String.Format("{0:MM//dd/yyyy}", frm["Ngaygiao"]);
-            dh.Ngaygiao = DateTime.Parse(ngaygiao);
-            dh.Sdtnhanhang = Int32.Parse(kh.Dienthoai);
-            dh.Diachigiaohang = kh.Diachi;
-            data.DONDATHANGs.InsertOnSubmit(dh);
-            data.SubmitChanges();
-            foreach (var i in list)
-            {
-                CHITIETDATHANG ct = new CHITIETDATHANG();
-                ct.MaDH = dh.MaDH;
-                ct.MaSP = i.idsp;
-                ct.Soluong = i.soluong;
-                ct.Dongia = (decimal)i.dongia;
-                ct.Tonggia = (decimal)i.tongtien;
-                data.CHITIETDATHANGs.InsertOnSubmit(ct);
-            }
-            dh.Thanhtien = (decimal?)Tongtien();
-            data.SubmitChanges();
-            Session["Giohang"] = null;
+                dh.Ngaygiao = DateTime.Parse(ngaygiao);
+                dh.Sdtnhanhang = Int32.Parse(kh.Dienthoai);
+                dh.Diachigiaohang = kh.Diachi;
+                data.DONDATHANGs.InsertOnSubmit(dh);
+                data.SubmitChanges();
+                foreach (var i in list)
+                {
+                    CHITIETDATHANG ct = new CHITIETDATHANG();
+                    ct.MaDH = dh.MaDH;
+                    ct.MaSP = i.idsp;
+                    ct.Soluong = i.soluong;
+                    ct.Dongia = (decimal)i.dongia;
+                    ct.Tonggia = (decimal)i.tongtien;
+                    data.CHITIETDATHANGs.InsertOnSubmit(ct);
+                }
+                dh.Thanhtien = (decimal?)Tongtien();
+                data.SubmitChanges();
+                Session["Giohang"] = null;
+          
             return RedirectToAction("Xacnhandonhang", "Giohang");
         }
         public ActionResult Xacnhandonhang()
