@@ -54,7 +54,11 @@ namespace TReEDeCor
                 url: "lien-he",
                 defaults: new { controller = "Contact", action = "Contact", id = UrlParameter.Optional }
             );
-
+            routes.MapRoute(
+               name: "Thnaks",
+               url: "xac-nhan-don-hang",
+               defaults: new { controller = "Giohang", action = "Xacnhandonhang", id = UrlParameter.Optional }
+           );
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

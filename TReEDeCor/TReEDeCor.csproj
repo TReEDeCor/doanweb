@@ -937,9 +937,9 @@
     <Content Include="font\font\themify-icons.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Image\ban1.jpg" />
-    <Content Include="Image\ban2.jpg" />
-    <Content Include="Image\ban3.jpg" />
+    <Content Include="Image\Tinmain1\ban1.jpg" />
+    <Content Include="Image\Tinmain1\ban2.jpg" />
+    <Content Include="Image\Tinmain1\ban3.jpg" />
     <Content Include="Image\baner111.jpg" />
     <Content Include="Image\banner-4.jpg" />
     <Content Include="Image\banner.jpg" />
@@ -1007,6 +1007,9 @@
     <Content Include="Image\sophaquang cao 2.jpg" />
     <Content Include="Image\sukien1.jpg" />
     <Content Include="Image\sukien2.jpg" />
+    <Content Include="Image\Tinmain1\dm1.png" />
+    <Content Include="Image\Tinmain1\dm2.png" />
+    <Content Include="Image\Tinmain1\dm3.png" />
     <Content Include="Image\Tinmain1\Tinmain1.jpg" />
     <Content Include="Image\Tinmain1\Tinmain2.jpg" />
     <Content Include="Image\Tinmain1\Tinmain3.jpg" />
