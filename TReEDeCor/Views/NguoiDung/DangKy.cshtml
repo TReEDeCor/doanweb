@@ -1,8 +1,6 @@
 ﻿
-@{
-    ViewBag.Title = "ĐăngKý-TàiKhoản";
-    Layout = "~/Views/_LayoutPhroduct.cshtml";
-}
+@{ ViewBag.Title = "ĐăngKý-TàiKhoản";
+    Layout = "~/Views/_LayoutPhroduct.cshtml"; }
 
 <div class="tmain text-center">
     <h2><b>  ĐĂNG KÝ TÀI KHOẢN </b></h2>
@@ -18,7 +16,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Courier New, Courier, monospace;
     }
 
     section-contact {
@@ -50,9 +47,12 @@
         section-contact .noi-dung {
             display: flex;
             position: absolute;
-            padding-left: 21%;
-            width: 85%;
+            padding-left: 10%;
+            width: 100%;
             height: 93%;
+            color: white;
+            background-color: black;
+            opacity: 0.875;
         }
 
             section-contact .noi-dung .form {
@@ -61,7 +61,7 @@
 
 
                 section-contact .noi-dung .form h2 {
-                    color: #000;
+                    color: white;
                     font-weight: 500;
                     font-size: 2em;
                     text-transform: uppercase;
@@ -80,7 +80,7 @@
                         font-size: 20px;
                         margin-bottom: 5px;
                         display: inline-block;
-                        color: #000;
+                        color: white;
                         letter-spacing: 1px;
                     }
 
@@ -88,12 +88,13 @@
                         width: 100%;
                         padding: 10px 20px;
                         outline: none;
-                        border: 1px solid #000;
+                        border-top: none;
+                        border-right: none;
+                        border-left: none;
                         font-size: 20px;
                         letter-spacing: 1px;
-                        color: #000;
+                        color: white;
                         background: transparent;
-                        border-radius: 30px;
                     }
 
                         section-contact .noi-dung .form .input-form input[type="submit"] {
@@ -117,7 +118,7 @@
                 }
 
                 section-contact .noi-dung .form .input-form p {
-                    color: #000;
+                    color: white;
                 }
 
                     section-contact .noi-dung .form .input-form p a {
@@ -163,76 +164,76 @@
                             font-size: 28px;
                         }
 </style>
-<h4 style="color:red; text-align:center">@ViewBag.ThongBao</h4>
+@*<h4 style="color:red; text-align:center">@ViewBag.ThongBao</h4>*@
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary(true)
+@Html.ValidationSummary(true)
 
-    <section-contact>
+                <section-contact>
 
-        <div class="img-bg">
-            <img src="~/Image/banner1.jpg"
-                 alt="Hình Ảnh Minh Họa">
-        </div>
+                    <div class="img-bg">
+                        <img src="~/Image/banner222.jpg"
+                             alt="Hình Ảnh Minh Họa">
+                    </div>
 
-        <div class="noi-dung">
-            <div class="row">
-                <form action="">
-                    <div class="col-6">
-                        <div class="form">
-                            <div class="input-form ">
-                                <span><b>Họ & Tên </b></span>
-                                <input type="text" name="HoTen" required>
-                            </div>
-                            <div class="input-form">
-                                <span><b>Ngày Sinh</b></span>
-                                <input type="date" name="NgaySinh">
-                            </div>
-                            <div class="input-form">
-                                <span><b>Nhập Gmail</b></span>
-                                <input type="email" name="Email" required>
-                                @ViewData["loi12"]
-                            </div>
-                            <div class="input-form">
-                                <span><b>Nhập SĐT</b></span>
-                                <input type="text" name="SDT" min="10" max="11" required> 
-                            </div>
+                    <div class="noi-dung">
+                        <div class="row">
+                            <form action="">
+                                <div class="col-6">
+                                    <div class="form">
+                                        <div class="input-form ">
+                                            <span><b>Họ & Tên </b></span>
+                                            <input type="text" name="HoTen" required>
+                                        </div>
+                                        <div class="input-form">
+                                            <span><b>Ngày Sinh</b></span>
+                                            <input type="date" name="NgaySinh">
+                                        </div>
+                                        <div class="input-form">
+                                            <span><b>Nhập Gmail</b></span>
+                                            <input type="email" name="Email" required>
+                                            @ViewData["loi12"]
+                                        </div>
+                                        <div class="input-form">
+                                            <span><b>Nhập SĐT</b></span>
+                                            <input type="text" name="SDT" min="10" max="11" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form">
+                                        <div class="input-form">
+                                            <span><b>Địa chỉ </b></span>
+                                            <input type="text" name="DiaChi" min="10" max="11" required>
+                                        </div>
+                                        <div class="input-form">
+                                            <span><b>Tên Đăng Nhập</b></span>
+                                            <input type="text" name="TenDangNhap" required>
+                                            @ViewData["loi11"]
+                                        </div>
+                                        <div class="input-form">
+                                            <span><b>Mật Khẩu</b></span>
+                                            <input type="password" name="MatKhau" required>
+                                        </div>
+                                        <div class="input-form">
+                                            <span><b>Nhập lại Mật Khẩu</b></span>
+                                            <input type="password" name="RematKhau" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form">
+                                    <div class="input-form">
+                                        <input type="submit" value="Đăng ký" required>
+                                    </div>
+                                    <div class="input-form">
+                                        <p><i>Bạn Đã Có Tài Khoản?</i> <a href="@Url.Action("Dangnhap", "NguoiDung")"><b>Đăng Nhập</b></a></p>
+                                    </div>
+                                </div>
+                            </form>
+
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="form">
-                            <div class="input-form">
-                                <span><b>Địa chỉ </b></span>
-                                <input type="text" name="DiaChi" min="10" max="11" required>
-                            </div>
-                            <div class="input-form">
-                                <span><b>Tên Đăng Nhập</b></span>
-                                <input type="text" name="TenDangNhap" required>
-                                @ViewData["loi11"]
-                            </div>
-                            <div class="input-form">
-                                <span><b>Mật Khẩu</b></span>
-                                <input type="password" name="MatKhau" required>
-                            </div>
-                            <div class="input-form">
-                                <span><b>Nhập lại Mật Khẩu</b></span>
-                                <input type="password" name="RematKhau" required>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form">
-                        <div class="input-form">
-                            <input type="submit" value="Đăng ký" required>
-                        </div>
-                        <div class="input-form">
-                            <p><i>Bạn Đã Có Tài Khoản?</i> <a href="@Url.Action("Dangnhap", "NguoiDung")"><b>Đăng Nhập</b></a></p>
-                        </div>
-                    </div>
-                </form>
 
-            </div>
-        </div>
-
-    </section-contact>
-}
+                </section-contact>}
+@*<h4 style="color:red; text-align:center">@ViewBag.ThongBao</h4>*@
 
