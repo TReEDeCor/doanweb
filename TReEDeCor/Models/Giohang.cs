@@ -14,7 +14,6 @@ namespace TReEDeCor.Models
         public Double dongia { get; set; }
         public int soluong { get; set; }
         public Double tongtien { get { return soluong * dongia; } }
-
         public Giohang(int id)
         {
             idsp = id;

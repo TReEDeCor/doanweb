@@ -800,3 +800,7 @@ C:\Users\giaph\source\repos\doan\TReEDeCor\obj\Debug\TReEDeCor.csproj.CoreCompil
 C:\Users\giaph\source\repos\doan\TReEDeCor\obj\Debug\TReEDeCor.csproj.CopyComplete
 C:\Users\giaph\source\repos\doan\TReEDeCor\obj\Debug\TReEDeCor.dll
 C:\Users\giaph\source\repos\doan\TReEDeCor\obj\Debug\TReEDeCor.pdb
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.SqlServer.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.SqlServer.xml
