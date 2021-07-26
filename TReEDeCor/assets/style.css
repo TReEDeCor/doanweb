@@ -176,13 +176,22 @@ html, body {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
   }
-  #sidebar-nav ul li:hover a, #sidebar-nav ul li:hover a i, #sidebar-nav li.active a, #sidebar-nav li.active a i {
-	color: #333;
-  }
-  #sidebar-nav ul li:hover a {
-	background: #fff;
-	color: #333;
-  }
+	#sidebar-nav ul li:hover a, #sidebar-nav ul li:hover a i, #sidebar-nav li.active a, #sidebar-nav li.active a i {
+		color: #333;
+		padding: 15px;
+		background-color: peru;
+		background-image: linear-gradient(to right,peru,white);
+		
+	}
+	#sidebar-nav ul li:hover a {
+		background: #fff;
+		color: #333;
+		padding: 15px;
+		background-color: peru;
+		background-image: linear-gradient(to right,peru,white);
+		font-weight:bold
+		
+	}
   #sidebar-nav ul li.active a {
 	background: #000;
 	color: #fff;
@@ -194,6 +203,7 @@ html, body {
 		color: #fff;
 		text-align: center;
 		border: 1px solid #C2C2C2;
+		
 	}
   #sidebar-nav ul li.active a i {
 	background: #fff;
@@ -218,7 +228,7 @@ html, body {
 	background: #fff;
 	border: 1px solid #E0E0E0;
 	float: left;
-	width: 100%;
+	width: 260px;
 	margin: 0 0 15px 15px;
   }
   .widget-header {

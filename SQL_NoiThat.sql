@@ -146,8 +146,8 @@ INSERT INTO [dbo].[SLIDER] ([LoaiSlider],[TenSP],[CapSP],[AnhSP],[Vitri],[Noidun
 	 ('DMSP',N'BÀN TRÀ',N'PHONG CÁCH','dm2.png',2,N'Nhập khẩu cao cấp',N'Tiện Nghi - Bền Bỉ',N'Hiện Đại - Khác Biệt'),
 	 ('DMSP',N'SOPHA DA',N'CAO CẤP','dm3.png',1,N'Sopha da thật 100%',N'Đẳng cấp - Sang Trọng',N'Nhẹ Nhàng - Tinh Tế'),
 
-	 ('Banner',N'SANG TRỌNG',N'Đẳng cấp','Tinmain1.jpg',null,N'SANG TRỌNG ĐẲNG CẤP','Thương hiệu nội thất uy tín VIỆT NAM. TReES Decor mang lại cho bạn một chiếc áo mới cho gia đình bạn .Một không gian mới .Một ý tưởng mới',null),
-	 ('Banner',N'TReES Decor',N'Không gian xanh - Đậm chất riêng','Tinmain2.jpg',2,N'SKhông gian xanh . Đậm chất riêng của bạn',null,null),
+	 ('Banner',N'SANG TRỌNG',N'Đẳng cấp','Tinmain1.jpg',null,N'SANG TRỌNG ĐẲNG CẤP',N'Thương hiệu nội thất uy tín VIỆT NAM. TReES Decor mang lại cho bạn một chiếc áo mới cho gia đình bạn .Một không gian mới .Một ý tưởng mới',null),
+	 ('Banner',N'TReES Decor',N'Không gian xanh - Đậm chất riêng','Tinmain2.jpg',2,N'Không gian xanh . Đậm chất riêng của bạn',null,null),
 	 ('Banner',N'KIỆT TÁC',N'Nhu cầu của bạn là ý tưởng nghệ thuật của chúng tôi','Tinmain3.jpg',null,N'KIỆT TÁC NGHỆ THUẬT THẾ GIỚI',N'Nhu cầu của bạn là ý tưởng nghệ thuật của chúng tôi. Mỗi tác phẩm mang trong mình cái hồn rất riêng, Những sãn phẩm chất lượng đến từ nhiều thương hiệu nổi tiếng.',null),
 
 	 ('Slider',null,'active','ban1.jpg',null,null,null,null),

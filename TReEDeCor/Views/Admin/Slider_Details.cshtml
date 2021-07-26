@@ -6,19 +6,11 @@
 }
 
 <h2>Slider_Details</h2>
-
+<h3>   @Html.DisplayFor(model => model.LoaiSlider) </h3>
 <div>
     <h4>SLIDER</h4>
     <hr />
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.LoaiSlider)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LoaiSlider)
-        </dd>
-
         <dt>
             @Html.DisplayNameFor(model => model.TenSP)
         </dt>
@@ -40,7 +32,7 @@
         </dt>
 
         <dd>
-            <img width="300" src="@Url.Content("~/Image/DMEND/" + Model.AnhSP)" />
+            <img width="300" src="@Url.Content("~/Image/Tinmain1/" + Model.AnhSP)" />
         </dd>
 
         <dt>

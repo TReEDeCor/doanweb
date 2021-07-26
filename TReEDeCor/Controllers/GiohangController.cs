@@ -159,6 +159,7 @@ namespace TReEDeCor.Controllers
         }
         public ActionResult Xacnhandonhang()
         {
+            Session["Giohang"] = null;
             return View();
         }
         public ActionResult Payment()
