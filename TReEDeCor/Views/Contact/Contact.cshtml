@@ -11,7 +11,7 @@
         box-sizing: border-box;
         font-family: Tahoma, sans-serif;
     }
-    
+
     section-contact {
         position: relative;
         width: 100%;
@@ -46,7 +46,10 @@
 
     section-contact .noi-dung {
         background-color: white;
-        background-image: linear-gradient(to right,white,grey);
+        background-image: linear-gradient(to right,none,grey);
+        opacity: 0.8;
+        /* background-color: white;
+        background-image: linear-gradient(to right,white,grey);*/
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,12 +98,15 @@
                     width: 380px;
                     padding: 10px 20px;
                     outline: none;
-                    border: 1px solid #000;
+                    border-top: none;
+                    border-right: none;
+                    border-left: none;
+                    /* border: 1px solid #000;*/
                     font-size: 18px;
                     letter-spacing: 1px;
                     color: #000;
                     background: transparent;
-                    border-radius: 30px;
+                    /*border-radius: 30px;*/
                 }
 
                     section-contact .noi-dung .form .input-form input[type="submit"] {
@@ -136,24 +142,24 @@
         line-height: 1.2;
         display: block;
         width: 380px;
-        height:80px;
+        height: 50px;
         padding: 0 5px;
         border: 1px solid #000;
         background: none;
-        border-bottom-left-radius:50px;
     }
 
     input.input100 {
-        height: 45px;
+        height: 25px;
         border: 1px solid #000;
     }
 
     textarea.input100 {
-       
-        min-height: 115px;
+        min-height: 80px;
         padding-top: 14px;
         padding-bottom: 13px;
-        border: 1px solid #000;
+        border-top: none;
+        border-right: none;
+        border-left: none;
     }
 </style>
 
@@ -177,17 +183,17 @@
                 <form action="">
                     <div class="input-form" data-validate="Name is required">
                         <span><b>Họ & Tên </b></span>
-                        <input type="text" name="name">
+                        <input type="text" name="name" placeholder="Họ & Tên" required>
                         @ViewData["loi1"]
                     </div>
                     <div class="input-form" data-validate="Valid email is required: ThuHop@gmail.com">
                         <span><b>Email</b></span>
-                        <input type="email" name="email">
+                        <input type="email" name="email" placeholder="Email" required>
                         @ViewData["loi2"]
                     </div>
                     <div class="input-form" data-validate="Phone is required">
                         <span><b>SĐT </b></span>
-                        <input type="text" name="phone" min="10" max="11">
+                        <input type="text" name="phone" min="10" max="11" placeholder="Số Điện Thoại" required>
                         @ViewData["loi3"]
                     </div>
                     <div class="input-form" data-validate="Message is required">
@@ -208,6 +214,7 @@
 
     </section-contact>
 }
+
 
 
 

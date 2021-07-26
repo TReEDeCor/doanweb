@@ -887,3 +887,7 @@ C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.dll
 C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.SqlServer.dll
 C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.xml
 C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.SqlServer.xml
+D:\Working\Github\TReEDeCor\bin\EntityFramework.dll
+D:\Working\Github\TReEDeCor\bin\EntityFramework.SqlServer.dll
+D:\Working\Github\TReEDeCor\bin\EntityFramework.xml
+D:\Working\Github\TReEDeCor\bin\EntityFramework.SqlServer.xml

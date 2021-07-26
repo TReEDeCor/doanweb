@@ -250,14 +250,15 @@ namespace TReEDeCor.Controllers
 
             if (!Request.QueryString["errorCode"].Equals("0"))
             {
-                //Session["or"] = null;
-                //Session["lstDe"] = null;
+                Session["or"] = null;
+                Session["lstDe"] = null;
                 ViewBag.message = "Thanh toán thất bại";
             }
             else
             {
                 ViewBag.message = "Thanh toán thành công";
                 SavePayment();
+                Session["Giohang"] = null;
             }
             return View();
         }
