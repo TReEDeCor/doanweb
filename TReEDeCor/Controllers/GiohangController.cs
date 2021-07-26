@@ -169,12 +169,10 @@ namespace TReEDeCor.Controllers
             DONDATHANG dh = new DONDATHANG();
 
             List<CHITIETDATHANG> Listct = new List<CHITIETDATHANG>();
-            NGUOIDUNG kh = (NGUOIDUNG)Session["Taikhoan"];
+            NGUOIDUNG kh =(NGUOIDUNG)Session["Taikhoan"];
             List<Giohang> list = Laygiohang();
             dh.MaKH = kh.MaKH;
             dh.Ngaydat = DateTime.Now;
-            //var ngaygiao = String.Format("{0:MM//dd/yyyy}", frm["Ngaygiao"]);
-            //dh.Ngaygiao = DateTime.Parse(ngaygiao);
             dh.Sdtnhanhang = Int32.Parse(kh.Dienthoai);
             dh.Diachigiaohang = kh.Diachi;
             dh.Thanhtien = (decimal?)Tongtien();
@@ -189,9 +187,7 @@ namespace TReEDeCor.Controllers
                 Listct.Add(ct);
             }
             Session["lstDe"] = Listct;
-
             Session["or"] = dh;
-
             //request params need to request to MoMo system
             string endpoint = "https://test-payment.momo.vn/gw_payment/transactionProcessor";
             string partnerCode = "MOMO15JK20210723";
@@ -251,8 +247,8 @@ namespace TReEDeCor.Controllers
 
             if (!Request.QueryString["errorCode"].Equals("0"))
             {
-                Session["or"] = null;
-                Session["lstDe"] = null;
+                //Session["or"] = null;
+                //Session["lstDe"] = null;
                 ViewBag.message = "Thanh toán thất bại";
             }
             else
