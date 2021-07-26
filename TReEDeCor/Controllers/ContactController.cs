@@ -59,12 +59,11 @@ namespace TReEDeCor.Controllers
                 cont.Ghichu = Ghichu;
                 db.LIENHEs.InsertOnSubmit(cont);
                 db.SubmitChanges();
-
+                return RedirectToAction("Index", "User");
 
             }
 
-            //return this.Contact();
-            return RedirectToAction("Index", "User");
+            return this.Contact();
         }
 
     }

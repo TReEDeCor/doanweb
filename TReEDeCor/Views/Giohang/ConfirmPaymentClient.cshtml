@@ -1,9 +1,27 @@
 ﻿
 @{
-    ViewBag.Title = "ConfirmPaymentClient";
+    ViewBag.Title = "Xác Nhận Đơn Hàng";
     Layout = "~/Views/_LayoutPhroduct.cshtml";
 }
 
-<h2>ConfirmPaymentClient</h2>
+<style>
+    .xacnhandonhang a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+        font-size: 20px;
+    }
+</style>
 
-@ViewBag.message
+
+<div class="xacnhandonhang" style="background-color:black;padding:100px;text-align:center">
+    <div class="container">
+        &ensp;
+        <h1> @ViewBag.message </h1>
+        <div style="background-color:white; text-align:center;padding:10px;border:groove;
+                                    border-color:darkgray; border-radius:10px">
+            <a href="@Url.Action("Index","Home")">TRỞ VỀ TRANG CHỦ</a>
+            <i class="fa ti-arrow-right m-l-7" aria-hidden="true"></i>
+        </div>
+    </div>
+</div>
