@@ -883,3 +883,7 @@ D:\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.csproj.CoreCompileInputs.ca
 D:\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.csproj.CopyComplete
 D:\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.dll
 D:\doan-main\doan-main\TReEDeCor\obj\Debug\TReEDeCor.pdb
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.SqlServer.dll
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.xml
+C:\Users\giaph\source\repos\doan\TReEDeCor\bin\EntityFramework.SqlServer.xml

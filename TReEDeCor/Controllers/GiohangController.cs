@@ -166,7 +166,8 @@ namespace TReEDeCor.Controllers
         {
 
             DONDATHANG dh = new DONDATHANG();
-            CHITIETDATHANG ct = new CHITIETDATHANG();
+
+            List<CHITIETDATHANG> Listct = new List<CHITIETDATHANG>();
             NGUOIDUNG kh = (NGUOIDUNG)Session["Taikhoan"];
             List<Giohang> list = Laygiohang();
             dh.MaKH = kh.MaKH;
@@ -178,12 +179,16 @@ namespace TReEDeCor.Controllers
             dh.Thanhtien = (decimal?)Tongtien();
             foreach (var i in list)
             {
+                CHITIETDATHANG ct = new CHITIETDATHANG();
                 ct.MaDH = dh.MaDH;
                 ct.MaSP = i.idsp;
                 ct.Soluong = i.soluong;
                 ct.Dongia = (decimal)i.dongia;
-                ct.Tonggia = (decimal)i.tongtien;  
+                ct.Tonggia = (decimal)i.tongtien;
+                Listct.Add(ct);
             }
+            Session["lstDe"] = Listct;
+
             Session["or"] = dh;
 
             //request params need to request to MoMo system
@@ -260,16 +265,22 @@ namespace TReEDeCor.Controllers
         public void SavePayment()
         {
             DatabaseDataContext db = new DatabaseDataContext();
+
             DONDATHANG order = (DONDATHANG)Session["or"];
-            CHITIETDATHANG lstDe = (CHITIETDATHANG)Session["lstDe"];
             db.DONDATHANGs.InsertOnSubmit(order);
-            
-            
-             //db.CHITIETDATHANGs.InsertOnSubmit(lstDe);
-          
             db.SubmitChanges();
+            List<CHITIETDATHANG> lstDe = (List<CHITIETDATHANG>)Session["lstDe"];
+            foreach (var item in lstDe)
+            {
+                //ma don dat hang khi luu moi co nhe
+                item.MaDH = order.MaDH;
+                db.CHITIETDATHANGs.InsertOnSubmit(item);
+                db.SubmitChanges();
+            }
+
             Session["or"] = null;
             Session["lstDe"] = null;
-        } 
+            Session["Giohang"] = null;
+        }
     }
 }
