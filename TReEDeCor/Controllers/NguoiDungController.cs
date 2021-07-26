@@ -34,100 +34,37 @@ namespace TReEDeCor.Controllers
             var rematkhau = collection["Rematkhau"];
             var sdt = collection["SDT"];
             var ngaysinh = String.Format("{0:MM/dd/yyyy}", collection["NgaySinh"]);
-            if (String.IsNullOrEmpty(hoten))
+           
+            NGUOIDUNG tk = db.NGUOIDUNGs.SingleOrDefault(n => n.Taikhoan == tendn);
+            NGUOIDUNG em = db.NGUOIDUNGs.SingleOrDefault(n => n.Email == email);
+            if (tk != null)
             {
-                ViewData["loi1"] = "Không được để trống";
+                ViewData["loi11"] = "Tài khoản đã tồn tại!";
             }
-            else if (String.IsNullOrEmpty(tendn))
+            else if (em != null)
             {
-                ViewData["loi2"] = "Không được để trống";
+                ViewData["loi12"] = "Email đã tồn tại!";
             }
-            else if (String.IsNullOrEmpty(email))
+            else if (matkhau == rematkhau)
             {
-                ViewData["loi3"] = "Không được để trống";
+                ngd.HoTen = hoten;
+                ngd.Taikhoan = tendn;
+                ngd.Matkhau = matkhau;
+                ngd.Email = email;
+                ngd.Diachi = diachi;
+                ngd.Dienthoai = sdt;
+                ngd.Ngaysinh = DateTime.Parse(ngaysinh);
+                db.NGUOIDUNGs.InsertOnSubmit(ngd);
+                db.SubmitChanges();
+                return RedirectToAction("Dangnhap");
             }
-            else if (String.IsNullOrEmpty(diachi))
-            {
-                ViewData["loi4"] = "Không được để trống";
-            }
-            else if (String.IsNullOrEmpty(matkhau))
-            {
-                ViewData["loi5"] = "Không được để trống";
-            }
-            //else if (String.IsNullOrEmpty(rematkhau))
-            //{
-            //    ViewData["loi6"] = "Không được để trống";
-            //}
-            else if (String.IsNullOrEmpty(sdt))
-            {
-                ViewData["loi7"] = "Không được để trống";
-            }
-            //else if (String.IsNullOrEmpty(ngaysinh))
-            //{
-            //    ViewData["loi8"] = "Không được để trống";
-            //}
             else
             {
-                NGUOIDUNG tk = db.NGUOIDUNGs.SingleOrDefault(n => n.Taikhoan == tendn);
-                NGUOIDUNG em = db.NGUOIDUNGs.SingleOrDefault(n => n.Email == email);
-                if (tk != null)
-                {
-                    ViewData["loi11"] = "Tài khoản đã tồn tại!";
-                }
-                else if (em != null)
-                {
-                    ViewData["loi12"] = "Email đã tồn tại!";
-                }
-                else if (matkhau == rematkhau)
-                {
-                    ngd.HoTen = hoten;
-                    ngd.Taikhoan = tendn;
-                    ngd.Matkhau = matkhau;
-                    ngd.Email = email;
-                    ngd.Diachi = diachi;
-                    ngd.Dienthoai = sdt;
-                    ngd.Ngaysinh = DateTime.Parse(ngaysinh);
-                    db.NGUOIDUNGs.InsertOnSubmit(ngd);
-                    db.SubmitChanges();
-                    return RedirectToAction("Dangnhap");
-                }
-                else
-                    ViewBag.ThongBao = "Mật Khẩu Không Khớp!";
-
+                ViewBag.ThongBao = "Mật Khẩu Không Khớp!";
             }
-            return this.DangKy();
+  
+                return this.DangKy();
         }
-        //public ActionResult DangNhap()
-        //{
-        //    return View();
-        //}
-
-        //[HttpPost]
-        //public ActionResult DangNhap(FormCollection collection)
-        //{
-        //    var tendn = collection["TenDangNhap"];
-        //    var matkhau = collection["MatKhau"];
-
-        //    if (String.IsNullOrEmpty(tendn))
-        //    {
-        //        ViewData["loi1"] = "Không được để trống";
-        //    }
-        //    else if (String.IsNullOrEmpty(matkhau))
-        //    {
-        //        ViewData["loi2"] = "Không được để trống";
-        //    }
-        //    else
-        //    {
-        //        NGUOIDUNG ngdung = db.NGUOIDUNGs.SingleOrDefault(n => n.Taikhoan == tendn && n.Matkhau == matkhau);
-        //        if (ngdung != null)
-        //        {
-        //            return RedirectToAction("Index", "Home");
-        //        }
-        //        else
-        //            ViewBag.ThongBao = "Tên Đăng Nhập Hoặc Tài Khoản Không Đúng";
-        //    }
-        //    return View();
-        //}
 
         public ActionResult Dangnhap()
         {
@@ -137,30 +74,18 @@ namespace TReEDeCor.Controllers
         [HttpPost]
         public ActionResult Dangnhap(FormCollection collection)
         {
-            var tendn = collection["TenDangNhap"];
-            var matkhau = collection["MatKhau"];
-
-            if (String.IsNullOrEmpty(tendn))
+        var tendn = collection["TenDangNhap"];
+        var matkhau = collection["MatKhau"];
+        NGUOIDUNG ngdung = db.NGUOIDUNGs.SingleOrDefault(n => n.Taikhoan == tendn && n.Matkhau == matkhau);
+        if (ngdung != null)
             {
-                ViewData["loi1"] = "Không được để trống";
-            }
-            else if (String.IsNullOrEmpty(matkhau))
-            {
-                ViewData["loi2"] = "Không được để trống";
+                Session["Taikhoan"] = ngdung;
+                return RedirectToAction("Index", "Home");
             }
             else
             {
-                NGUOIDUNG ngdung = db.NGUOIDUNGs.SingleOrDefault(n => n.Taikhoan == tendn && n.Matkhau == matkhau);
-                if (ngdung != null)
-                {
-
-                    Session["Taikhoan"] = ngdung;
-                    return RedirectToAction("Index", "Home");
-
-                }
-                else
-                    ViewBag.ThongBao = "Tên Đăng Nhập Hoặc Tài Khoản Không Đúng";
-            }
+                ViewBag.ThongBao = "Tên Đăng Nhập Hoặc Tài Khoản Không Đúng";
+            }               
             return View();
         }
 
@@ -169,9 +94,5 @@ namespace TReEDeCor.Controllers
             Session.Clear();
             return RedirectToAction("Index","Home");
         }
-
-
-
-
     }
 }

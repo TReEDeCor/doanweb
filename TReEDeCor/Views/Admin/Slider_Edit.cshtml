@@ -7,7 +7,7 @@
 
 <h2>Slider Edit</h2>
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Slider_Edit", "Admin", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
     
@@ -38,7 +38,7 @@
             <div class="col-md-10">
                 <input type="file" name="fileUp" id="fileUp" />
                 <img id="preview" src="#" width="150" height="100" style="visibility:hidden" />
-                <img width="150" height="100" src="@Url.Content("~/Image/DMEND/" +Model.AnhSP)" />(Ảnh hiện tại)
+                <img width="150" height="100" src="@Url.Content("~/Image/Tinmain1/" +Model.AnhSP)" />(Ảnh hiện tại)
             </div>
         </div>
 
@@ -85,3 +85,12 @@
 <div>
     @Html.ActionLink("Back to List", "Isslider", "Admin")
 </div>
+
+<script>fileUp.onchange = evt => {
+        const [file] = fileUp.files
+        if (file) {
+            preview.src = URL.createObjectURL(file);
+            var img = document.getElementById('preview');
+            img.style.visibility = 'visible';
+        }
+    }</script>

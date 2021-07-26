@@ -12,63 +12,6 @@
     <h1></h1>
     &ensp;
 </div>
-@*<table align="center">
-        <h2 style="text-align:center">Đăng Ký Thành Viên</h2>
-        <h4 style="color:red; text-align:center">@ViewBag.ThongBao</h4>
-        @using (Html.BeginForm())
-        {
-            @Html.ValidationSummary(true)
-
-            <tr style="height:40px">
-                <td>Họ và Tên:</td>
-                <td>@Html.TextBox("HoTen") @ViewData["loi1"] </td>
-            </tr>
-            <tr style="height:40px">
-                <td>Tên Đăng Nhập:</td>
-                <td>@Html.TextBox("TenDangNhap") @ViewData["loi2"] @ViewData["loi11"] </td>
-            </tr>
-            <tr style="height:40px">
-                <td>Email:</td>
-                <td>@Html.TextBox("Email") @ViewData["loi3"] @ViewData["loi12"] </td>
-            </tr>
-            <tr style="height:40px">
-                <td>Địa Chỉ:</td>
-                <td>@Html.TextBox("DiaChi") @ViewData["loi4"] </td>
-            </tr>
-            <tr style="height:40px">
-                <td>Số Điện Thoại:</td>
-                <td>@Html.TextBox("SDT") @ViewData["loi7"] </td>
-            </tr>
-            <tr style="height:40px">
-                <td>Ngày Sinh:</td>
-                <td>
-                    <input type="date" name="NgaySinh" required />
-                </td>
-            </tr>
-            <tr style="height:40px">
-                <td>Mật Khẩu:</td>
-                <td>
-                    <input type="password" name="MatKhau" required size="30" />
-                </td>
-            </tr>
-            <tr style="height:40px">
-                <td>Nhập Lại Mật Khẩu:</td>
-                <td>
-                    <input type="password" name="Rematkhau" required size="30" />
-                </td>
-            </tr>
-            <tr style="height:40px">
-                <td></td>
-                <td>
-                    <input type="submit" value="Đăng Ký" />
-                </td>
-
-            </tr>
-        }
-    </table>
-        <p style="text-align:center"><a href="https://localhost:44321/nguoidung/dangnhap"><b>Đăng Nhập Tài Khoản</b></a></p>*@
-
-
 
 <style>
     * {
@@ -107,8 +50,6 @@
         section-contact .noi-dung {
             display: flex;
             position: absolute;
-            /*justify-content: center;*/
-            /*align-items: center;*/
             padding-left: 21%;
             width: 85%;
             height: 93%;
@@ -222,7 +163,7 @@
                             font-size: 28px;
                         }
 </style>
-
+<h4 style="color:red; text-align:center">@ViewBag.ThongBao</h4>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
@@ -235,33 +176,26 @@
         </div>
 
         <div class="noi-dung">
-            @*<div class="form">*@
-            @*<h2> <b>Đăng ký</b></h2>*@
             <div class="row">
-
                 <form action="">
                     <div class="col-6">
                         <div class="form">
                             <div class="input-form ">
                                 <span><b>Họ & Tên </b></span>
-                                <input type="text" name="HoTen">
-                                @ViewData["loi1"]
+                                <input type="text" name="HoTen" required>
                             </div>
                             <div class="input-form">
                                 <span><b>Ngày Sinh</b></span>
                                 <input type="date" name="NgaySinh">
-
                             </div>
-
-
                             <div class="input-form">
                                 <span><b>Nhập Gmail</b></span>
-                                <input type="email" name="Email">@ViewData["loi3"]
+                                <input type="email" name="Email" required>
+                                @ViewData["loi12"]
                             </div>
-
                             <div class="input-form">
                                 <span><b>Nhập SĐT</b></span>
-                                <input type="text" name="SDT" min="10" max="11"> @ViewData["loi7"]
+                                <input type="text" name="SDT" min="10" max="11" required> 
                             </div>
                         </div>
                     </div>
@@ -269,27 +203,26 @@
                         <div class="form">
                             <div class="input-form">
                                 <span><b>Địa chỉ </b></span>
-                                <input type="text" name="DiaChi" min="10" max="11">
-                                @ViewData["loi4"]
+                                <input type="text" name="DiaChi" min="10" max="11" required>
                             </div>
                             <div class="input-form">
                                 <span><b>Tên Đăng Nhập</b></span>
-                                <input type="text" name="TenDangNhap">
-                                @ViewData["loi2"] @ViewData["loi11"]
+                                <input type="text" name="TenDangNhap" required>
+                                @ViewData["loi11"]
                             </div>
                             <div class="input-form">
                                 <span><b>Mật Khẩu</b></span>
-                                <input type="password" name="MatKhau">
+                                <input type="password" name="MatKhau" required>
                             </div>
                             <div class="input-form">
                                 <span><b>Nhập lại Mật Khẩu</b></span>
-                                <input type="password" name="RematKhau">
+                                <input type="password" name="RematKhau" required>
                             </div>
                         </div>
                     </div>
                     <div class="form">
                         <div class="input-form">
-                            <input type="submit" value="Đăng ký">
+                            <input type="submit" value="Đăng ký" required>
                         </div>
                         <div class="input-form">
                             <p><i>Bạn Đã Có Tài Khoản?</i> <a href="@Url.Action("Dangnhap", "NguoiDung")"><b>Đăng Nhập</b></a></p>
@@ -298,7 +231,6 @@
                 </form>
 
             </div>
-            @*</div>*@
         </div>
 
     </section-contact>

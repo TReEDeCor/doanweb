@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using TReEDeCor.Models;
-using PagedList;
-using PagedList.Mvc;
+using System.IO;
 
 namespace TReEDeCor.Controllers
 {
@@ -48,95 +46,12 @@ namespace TReEDeCor.Controllers
             return View();
         }
 
-
-        ///////////////////////////////////
-        public ActionResult Product()
+        public ActionResult Logout()
         {
-            return View(db.SANPHAMs.ToList());
+            Session.Clear();
+            return RedirectToAction("Index", "Home");
         }
 
-        public ActionResult Details(int id)
-        {
-            if (Session["TKAdmin"] == null)
-            {
-                return RedirectToAction("Login", "Admin");
-            }
-            else
-            {
-                var sanpham = from SANPHAM in db.SANPHAMs where SANPHAM.MaSP == id select SANPHAM;
-                return View(sanpham.SingleOrDefault());
-            }
-        }
-        [HttpGet]
-        public ActionResult Create()
-        {
-            if (Session["TKAdmin"] == null)
-            {
-                return RedirectToAction("Login", "Admin");
-            }
-            else
-                return View();
-        }
-        [HttpPost]
-        public ActionResult Create(SANPHAM sanpham)
-        {
-            if (Session["TKAdmin"] == null)
-            {
-                return RedirectToAction("Login", "Admin");
-            }
-            else
-            {
-                db.SANPHAMs.InsertOnSubmit(sanpham);
-                db.SubmitChanges();
-
-                return View("Index","Admin");
-            }
-        }
-
-
-        [HttpGet]
-        public ActionResult Edit(int id)
-        {
-            if (Session["TKAdmin"] == null)
-            {
-                return RedirectToAction("Login", "Admin");
-            }
-            else
-            {
-                var sanpham = from SANPHAM in db.SANPHAMs where SANPHAM.MaSP == id select SANPHAM;
-                return View(sanpham.SingleOrDefault());
-            }
-        }
-        [HttpPost, ActionName("Edit")]
-        public ActionResult capnhat(int id)
-        {
-            SANPHAM sanpham = db.SANPHAMs.Where(n => n.MaSP == id).SingleOrDefault();
-            UpdateModel(sanpham);
-            db.SubmitChanges();
-            return RedirectToAction("Index", "Admin");
-        }
-
-        [HttpGet]
-        public ActionResult Delete(int id)
-        {
-            if (Session["TKAdmin"] == null)
-            {
-                return RedirectToAction("Login", "Admin");
-            }
-            else
-            {
-                var sanpham = from SANPHAM in db.SANPHAMs where SANPHAM.MaSP == id select SANPHAM;
-                return View(sanpham.SingleOrDefault());
-            }
-        }
-        [HttpPost, ActionName("Delete")]
-        public ActionResult xoasp(int id)
-        {
-            SANPHAM sanpham = db.SANPHAMs.Where(n => n.MaSP == id).SingleOrDefault();
-            db.SANPHAMs.DeleteOnSubmit(sanpham);
-            db.SubmitChanges();
-            return RedirectToAction("Index", "Admin");
-        }
         //////////////////////////////////
         public ActionResult Isslider()
         {
@@ -159,69 +74,56 @@ namespace TReEDeCor.Controllers
             }
         }
         [HttpGet]
-        public ActionResult Slider_Create()
-        {
-            if (Session["TKAdmin"] == null)
-            {
-                return RedirectToAction("Login", "Admin");
-            }
-            else
-                return View();
-        }
-        [HttpPost]
-        public ActionResult Slider_Create(SLIDER s)
-        {
-            if (Session["TKAdmin"] == null)
-            {
-                return RedirectToAction("Login", "Admin");
-            }
-            else
-            {
-                db.SLIDERs.InsertOnSubmit(s);
-                db.SubmitChanges();
-
-                return RedirectToAction("Isslider", "Admin");
-            }
-        }
-        [HttpGet]
         public ActionResult Slider_Edit(int id)
         {
+            SLIDER slr = db.SLIDERs.SingleOrDefault(n => n.MaSlider == id);
             if (Session["TKAdmin"] == null)
             {
                 return RedirectToAction("Login", "Admin");
             }
+            else if (slr == null)
+            {
+                Response.StatusCode = 404;
+                return null;
+            }
             else
             {
-                var s = from SLIDER in db.SLIDERs where SLIDER.MaSlider == id select SLIDER;
-                return View(s.SingleOrDefault());
+                return View(slr);
             }
         }
+
         [HttpPost, ActionName("Slider_Edit")]
-        public ActionResult capnhatSlider(int id)
+        [ValidateInput(false)]
+        public ActionResult capnhatSlider(SLIDER slr, HttpPostedFileBase fileUp)
         {
-            SLIDER s = db.SLIDERs.Where(n => n.MaSlider == id).SingleOrDefault();
-            UpdateModel(s);
-            db.SubmitChanges();
-            return RedirectToAction("Isslider", "Admin");
-        }
-        public ActionResult Slider_Delete(int id)
-        {
-            if (Session["TKAdmin"] == null)
+            SLIDER spUpdate = db.SLIDERs.SingleOrDefault(p => p.MaSlider == slr.MaSlider);
+            if (spUpdate != null)
             {
-                return RedirectToAction("Login", "Admin");
+                if (fileUp != null)
+                {
+                    var fileName = Path.GetFileName(fileUp.FileName);
+                    var path = Path.Combine(Server.MapPath("~/Image/Tinmain1/"), fileName);
+                    if (System.IO.File.Exists(path))
+                    {
+                        TempData["Error"] = "Hình Đã Tồn Tại!";
+                        return RedirectToAction("Edit", new { id = slr.MaSlider });
+                    }
+                    else
+                    {
+                        fileUp.SaveAs(path);
+                        spUpdate.AnhSP = fileName;
+                    }
+                }
+                spUpdate.LoaiSlider = slr.LoaiSlider;
+                spUpdate.TenSP = slr.TenSP;
+                spUpdate.CapSP = slr.CapSP;
+                spUpdate.Vitri = slr.Vitri;
+                spUpdate.Noidung1 = slr.Noidung1;
+                spUpdate.Noidung2 = slr.Noidung2;
+                spUpdate.Noidung3 = slr.Noidung3;
+                UpdateModel(slr);
+                db.SubmitChanges();
             }
-            else
-            {
-                var s = from SLIDER in db.SLIDERs where SLIDER.MaSlider == id select SLIDER;
-                return View(s.SingleOrDefault());
-            }
-        }
-        [HttpPost, ActionName("Slider_Delete")]
-        public ActionResult xoaSlider(int id)
-        {
-            SLIDER s = db.SLIDERs.Where(n => n.MaSlider == id).SingleOrDefault();
-            db.SLIDERs.DeleteOnSubmit(s);
-            db.SubmitChanges();
             return RedirectToAction("Isslider", "Admin");
         }
     }
