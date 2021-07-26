@@ -1580,7 +1580,6 @@
     <Content Include="Views\SanPham\Edit.cshtml" />
     <Content Include="Views\SanPham\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
-    <Content Include="Views\ThanhtoanMOMO\thanhtoantructuyen.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
