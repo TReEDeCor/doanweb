@@ -128,7 +128,7 @@
                     <tr style="text-align:center; font-weight:bold ">
                         <td>@item.idsp</td>
                         <td>@item.tensanpham</td>
-                        <td><img src="~/Image/IMG-PRODUCT/@item.anh" width="200px" height="200px" /></td>
+                        <td><img src="~/Image/IMG-PRODUCT/@item.anh" width="200" height="200" /></td>
                         @using (Html.BeginForm("Capnhatgiohang", "Giohang", new { id = item.idsp }))
                         {
                             <td>  @item.soluong </td>
@@ -147,11 +147,11 @@
         <div class="col-4">
             <h2 style="text-align: center; font-family: Courier New, Courier, monospace;color:white"> THÔNG TIN KHÁCH HÀNG</h2>
             <div class="ttkh" style="background-color: white; color:black; border: solid; font-weight:bold;
-       border-block-color: black; border-radius: 15px; padding: 55px;padding-bottom:160px;padding-right:15px;">
+                 border-radius: 15px; padding: 55px;padding-bottom:160px;padding-right:15px;">
                 @using TReEDeCor.Models
 
                 @{
-                    NGUOIDUNG kh = (NGUOIDUNG)Session["Taikhoan"];
+                    NGUOIDUNG kh = (NGUOIDUNG)Session["Taikhoan"]; 
                 }
                 <table>
                     @using (Html.BeginForm())

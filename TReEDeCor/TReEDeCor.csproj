@@ -47,6 +47,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
@@ -58,6 +64,8 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -152,9 +160,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Database.cs">
-      <DependentUpon>Database.dbml</DependentUpon>
-    </Compile>
+    <Compile Include="Models\ChiTiet.cs" />
     <Compile Include="Models\Database.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -569,10 +575,6 @@
     <Content Include="assets\font\themify-icons\SVG\zoom-in.svg" />
     <Content Include="assets\font\themify-icons\SVG\zoom-out.svg" />
     <Content Include="assets\font\themify-icons\themify-icons.css" />
-    <Content Include="assets\img\admin1.jpg" />
-    <Content Include="assets\img\admin2.jpg" />
-    <Content Include="assets\img\admin3.jpg" />
-    <Content Include="assets\img\admin4.jpg" />
     <Content Include="assets\img\thuhop.jpg.jpg" />
     <Content Include="assets\style.css" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -1014,12 +1016,6 @@
     <Content Include="Image\sophaquang cao 2.jpg" />
     <Content Include="Image\sukien1.jpg" />
     <Content Include="Image\sukien2.jpg" />
-    <Content Include="Image\Tinmain1\ban1.jpg" />
-    <Content Include="Image\Tinmain1\ban2.jpg" />
-    <Content Include="Image\Tinmain1\ban3.jpg" />
-    <Content Include="Image\Tinmain1\dm1.png" />
-    <Content Include="Image\Tinmain1\dm2.png" />
-    <Content Include="Image\Tinmain1\dm3.png" />
     <Content Include="Image\Tinmain1\Tinmain1.jpg" />
     <Content Include="Image\Tinmain1\Tinmain2.jpg" />
     <Content Include="Image\Tinmain1\Tinmain3.jpg" />
@@ -1580,6 +1576,8 @@
     <Content Include="Views\SanPham\Edit.cshtml" />
     <Content Include="Views\SanPham\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
+    <Content Include="Views\ThanhtoanMOMO\thanhtoantructuyen.cshtml" />
+    <Content Include="Views\Giohang\ConfirmPaymentClient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />

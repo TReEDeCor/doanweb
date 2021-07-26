@@ -164,13 +164,35 @@ namespace TReEDeCor.Controllers
         }
         public ActionResult Payment()
         {
+
+            DONDATHANG dh = new DONDATHANG();
+            CHITIETDATHANG ct = new CHITIETDATHANG();
+            NGUOIDUNG kh = (NGUOIDUNG)Session["Taikhoan"];
+            List<Giohang> list = Laygiohang();
+            dh.MaKH = kh.MaKH;
+            dh.Ngaydat = DateTime.Now;
+            //var ngaygiao = String.Format("{0:MM//dd/yyyy}", frm["Ngaygiao"]);
+            //dh.Ngaygiao = DateTime.Parse(ngaygiao);
+            dh.Sdtnhanhang = Int32.Parse(kh.Dienthoai);
+            dh.Diachigiaohang = kh.Diachi;
+            dh.Thanhtien = (decimal?)Tongtien();
+            foreach (var i in list)
+            {
+                ct.MaDH = dh.MaDH;
+                ct.MaSP = i.idsp;
+                ct.Soluong = i.soluong;
+                ct.Dongia = (decimal)i.dongia;
+                ct.Tonggia = (decimal)i.tongtien;  
+            }
+            Session["or"] = dh;
+
             //request params need to request to MoMo system
             string endpoint = "https://test-payment.momo.vn/gw_payment/transactionProcessor";
             string partnerCode = "MOMO15JK20210723";
             string accessKey = "m3vHuZl8qZoxniyv";
             string serectkey = "g90eux9ZDPl6uFqKjZNlCTy0yNWwBO2m";
-            string orderInfo = "test";
-            string returnUrl = "https://localhost:44321/xac-nhan-don-hang";
+            string orderInfo = "Treedecord";
+            string returnUrl = "https://localhost:44321/Giohang/ConfirmPaymentClient";
             string notifyurl = "http://ba1adf48beba.ngrok.io/Home/SavePayment";
 
             string amount = Tongtien().ToString();
@@ -218,6 +240,36 @@ namespace TReEDeCor.Controllers
             return Redirect(jmessage.GetValue("payUrl").ToString());
         }
 
+        public ActionResult ConfirmPaymentClient()
+        {
 
+            if (!Request.QueryString["errorCode"].Equals("0"))
+            {
+                //Session["or"] = null;
+                //Session["lstDe"] = null;
+                ViewBag.message = "Thanh toán thất bại";
+            }
+            else
+            {
+                ViewBag.message = "Thanh toán thành công";
+                SavePayment();
+            }
+            return View();
+        }
+
+        public void SavePayment()
+        {
+            DatabaseDataContext db = new DatabaseDataContext();
+            DONDATHANG order = (DONDATHANG)Session["or"];
+            CHITIETDATHANG lstDe = (CHITIETDATHANG)Session["lstDe"];
+            db.DONDATHANGs.InsertOnSubmit(order);
+            
+            
+             //db.CHITIETDATHANGs.InsertOnSubmit(lstDe);
+          
+            db.SubmitChanges();
+            Session["or"] = null;
+            Session["lstDe"] = null;
+        } 
     }
 }
