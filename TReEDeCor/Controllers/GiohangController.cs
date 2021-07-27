@@ -195,8 +195,8 @@ namespace TReEDeCor.Controllers
             string serectkey = "g90eux9ZDPl6uFqKjZNlCTy0yNWwBO2m";
             string orderInfo = "Treedecord";
             string returnUrl = "https://localhost:44321/Giohang/ConfirmPaymentClient";
-            string notifyurl = "http://ba1adf48beba.ngrok.io/Home/SavePayment";
-
+            //string notifyurl = "http://ba1adf48beba.ngrok.io/Home/SavePayment";
+            string notifyurl = "http://localhost:44321/Giohang/SavePayment";
             string amount = Tongtien().ToString();
             string orderid = DateTime.Now.Ticks.ToString();
             string requestId = DateTime.Now.Ticks.ToString();
@@ -247,8 +247,8 @@ namespace TReEDeCor.Controllers
 
             if (!Request.QueryString["errorCode"].Equals("0"))
             {
-                //Session["or"] = null;
-                //Session["lstDe"] = null;
+                Session["or"] = null;
+                Session["lstDe"] = null;
                 ViewBag.message = "Thanh toán thất bại";
             }
             else
