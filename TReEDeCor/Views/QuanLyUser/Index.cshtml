@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TReEDeCor.Models.Admin>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center">Quản lý người dùng</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên tài khoản
+        </th>
+        <th>
+            Mật khẩu
+        </th>
+        <th>
+            Họ tên
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.UserAdmin)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PassAdmin)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HoTen)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.UserAdmin }) |
+        @Html.ActionLink("Details", "Details", new { id = item.UserAdmin }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.UserAdmin })
+    </td>
+</tr>
+}
+
+</table>

@@ -151,6 +151,7 @@
     <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\NhaCungCapController.cs" />
     <Compile Include="Controllers\PhroDuctController.cs" />
+    <Compile Include="Controllers\QuanLyUserController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\SuKienController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
@@ -1578,6 +1579,10 @@
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\ThanhtoanMOMO\thanhtoantructuyen.cshtml" />
     <Content Include="Views\Giohang\ConfirmPaymentClient.cshtml" />
+    <Content Include="Views\QuanLyUser\Index.cshtml" />
+    <Content Include="Views\QuanLyUser\Details.cshtml" />
+    <Content Include="Views\QuanLyUser\Create.cshtml" />
+    <Content Include="Views\QuanLyUser\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
