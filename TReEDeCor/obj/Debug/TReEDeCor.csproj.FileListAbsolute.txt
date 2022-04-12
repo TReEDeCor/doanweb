@@ -973,8 +973,8 @@ D:\doan\TReEDeCor\bin\System.Web.WebPages.Razor.xml
 D:\doan\TReEDeCor\bin\Newtonsoft.Json.xml
 D:\doan\TReEDeCor\bin\Antlr3.Runtime.pdb
 D:\doan\TReEDeCor\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\doan\TReEDeCor\obj\Debug\TReEDeCor.csprojAssemblyReference.cache
 D:\doan\TReEDeCor\obj\Debug\TReEDeCor.csproj.CoreCompileInputs.cache
 D:\doan\TReEDeCor\obj\Debug\TReEDeCor.csproj.CopyComplete
 D:\doan\TReEDeCor\obj\Debug\TReEDeCor.dll
 D:\doan\TReEDeCor\obj\Debug\TReEDeCor.pdb
+D:\doan\TReEDeCor\obj\Debug\TReEDeCor.csproj.AssemblyReference.cache

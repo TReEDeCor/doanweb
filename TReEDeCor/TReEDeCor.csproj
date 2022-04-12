@@ -151,6 +151,7 @@
     <Compile Include="Controllers\NguoiDungController.cs" />
     <Compile Include="Controllers\NhaCungCapController.cs" />
     <Compile Include="Controllers\PhroDuctController.cs" />
+    <Compile Include="Controllers\QuanLyKhachHangController.cs" />
     <Compile Include="Controllers\QuanLyUserController.cs" />
     <Compile Include="Controllers\SanPhamController.cs" />
     <Compile Include="Controllers\SuKienController.cs" />
@@ -1583,6 +1584,9 @@
     <Content Include="Views\QuanLyUser\Details.cshtml" />
     <Content Include="Views\QuanLyUser\Create.cshtml" />
     <Content Include="Views\QuanLyUser\Delete.cshtml" />
+    <Content Include="Views\QuanLyKhachHang\Index.cshtml" />
+    <Content Include="Views\QuanLyKhachHang\Delete.cshtml" />
+    <Content Include="Views\QuanLyKhachHang\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
