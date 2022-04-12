@@ -8,39 +8,92 @@
 <h2 style="text-align:center">Quản lý người dùng</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Tạo Người Dùng", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            Tên tài khoản
-        </th>
-        <th>
-            Mật khẩu
-        </th>
-        <th>
-            Họ tên
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.UserAdmin)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.PassAdmin)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.HoTen)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.UserAdmin }) |
-        @Html.ActionLink("Details", "Details", new { id = item.UserAdmin }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.UserAdmin })
-    </td>
-</tr>
-}
+<table class="table table-dark">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Tên tài khoản</th>
+            <th scope="col">Họ Tên</th>
+            <th scope="col">Mật Khẩu</th>
+            <th scope="col">Thao Tác</th>
+        </tr>
+    </thead>
 
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.UserAdmin)</td>
+                <td> @Html.DisplayFor(modelItem => item.HoTen)</td>
+                <td> @Html.DisplayFor(modelItem => item.PassAdmin)</td>
+                <td>
+                    <span>
+
+                        @Html.ActionLink("Sửa", "Edit", new { id = item.UserAdmin })
+                    </span>
+                    <span>
+
+                        @Html.ActionLink("Chi Tiết", "Details", new { id = item.UserAdmin })
+                    </span>
+                    <span>
+
+                        @Html.ActionLink("Xóa", "Delete", new { id = item.UserAdmin })
+                    </span>
+                </td>
+            </tr>
+        }
+
+    </tbody>
 </table>
+
+<style>
+    p {
+        display: inline-block;
+        padding: 0.5rem 0.8rem;
+        background-color: #ccc;
+        border-radius: 0.5rem;
+        
+    }
+
+    p a {
+            font-size: 1.2rem;
+            color: #fff;
+    }
+
+    table {
+        margin: 0 auto;
+    }
+    table thead tr {
+        background-color: #000;
+    }
+    table thead tr th {
+        color: #ccc;
+        padding: 0.5rem 3rem;
+    }
+
+    tbody tr td {
+        text-align: center;
+        padding: 1.2rem 1rem;
+        background-color: #f1f1f1;
+    }
+
+    tbody tr td span {
+        padding: 0.5rem 0.8rem;
+        background-color: #f7941d;
+        border-radius: 0.5rem;
+        margin: 0.2rem;
+    }
+    tbody tr td span:first-child {
+        background-color: #2ebfea;
+    }
+    tbody tr td span:last-child {
+        background-color: #ff0000;
+    }
+
+    tbody tr td span a {
+        color: #fff;
+    }
+</style>
+

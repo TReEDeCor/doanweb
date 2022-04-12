@@ -152,6 +152,7 @@ header .sticky {
 
     #nav li:hover .subnav {
         display: inline-block;
+       
     }
 
     #nav > li > a:hover:before {
@@ -189,7 +190,7 @@ header .sticky {
     }
 
     .subnav a:hover {
-        color: /*peru*/ darkgoldenrod;
+        color: #b47005;
         background: none;
         text-decoration: none;
     }
@@ -197,7 +198,6 @@ header .sticky {
 
     #nav > li:hover > a {
         background-color: #777;
-        color: #353410;
     }
 
     #nav .subnav {
